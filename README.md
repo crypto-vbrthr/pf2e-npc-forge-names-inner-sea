@@ -4,9 +4,37 @@
 
 The add-on requires **PF2E NPC Forge 1.1.0 or newer**.
 
+## 0.3.0 – Ancestry Names II
+
+Version 0.3.0 adds six further ancestry-focused name packs:
+
+- Leshy
+- Catfolk / Amurrun
+- Hobgoblin
+- Lizardfolk / Iruxi
+- Kholo
+- Kobold
+
+As with the first ancestry expansion, these are universal ancestry packs rather than invented regional cultures. They can therefore serve as expanded default pools anywhere in the Inner Sea region and remain valid fallbacks when no more specific cultural pack exists.
+
+The new packs add roughly **43,344 additional base names or full-name combinations**. Together with versions 0.1.0 and 0.2.0, Names of the Inner Sea now exposes approximately **100,000 base naming combinations** before optional epithets are considered.
+
+### New naming styles
+
+The second ancestry block makes heavier use of NPC Forge's compositional naming support:
+
+- **Leshies** use fully compositional, semantically localized given names built from natural elements, producing names such as `Mossbud` / `Moosknospe` or `Sunbloom` / `Sonnenblüte`. They do not require a family name.
+- **Catfolk / Amurrun** use flowing proper given names and localized descriptive family names such as `Moonwhisker` / `Mondschnurrhaar`.
+- **Hobgoblins** use disciplined, martial proper names and formation- or duty-themed family names such as `Ironwatch` / `Eisenwache`.
+- **Iruxi** use sibilant proper names and environment- or scale-themed family names such as `Reedscale` / `Schilfschuppe`.
+- **Kholo** use strong proper names and pack-, trail-, and hunting-themed family names such as `Dusttrack` / `Staubspur`.
+- **Kobolds** use compact draconic-sounding proper names and treasure-, tunnel-, and dragon-themed family names such as `Emberhoard` / `Gluthort`.
+
+Each ancestry also includes a small pool of optional localized epithets.
+
 ## 0.2.0 – Ancestry Names I
 
-Version 0.2.0 expands the add-on beyond human regional cultures with six ancestry-focused name packs:
+The first ancestry expansion adds universal name packs for:
 
 - Dwarf
 - Elf
@@ -15,22 +43,7 @@ Version 0.2.0 expands the add-on beyond human regional cultures with six ancestr
 - Goblin
 - Orc
 
-These packs are registered as universal ancestry packs rather than artificial regional cultures. They therefore work as expanded name pools for the corresponding ancestry anywhere in the Inner Sea region and remain available as fallbacks if no more specific cultural pack exists.
-
-The six new packs add roughly **38,160 base given-name/family-name combinations**. Together with the human cultures from 0.1.0, the add-on now exposes approximately **56,760 base combinations** before optional epithets are considered.
-
-### Ancestry-specific naming styles
-
-The packs intentionally do not force every ancestry into the same `given name + static surname` pattern:
-
-- **Dwarves** use solid given names and compositional, localized craft- and stone-themed family names such as `Ironhammer` / `Eisenhammer`.
-- **Elves** use flowing proper given and family names that remain untranslated.
-- **Halflings** use approachable given names and compositional speaking family names such as `Greenleaf` / `Grünblatt`.
-- **Gnomes** use playful proper names and whimsical family names.
-- **Goblins** use short given names plus highly descriptive compositional surnames such as `Sootface` / `Rußgesicht`.
-- **Orcs** use strong given names and compositional clan-style family names such as `Ironfist` / `Eisenfaust`.
-
-Each ancestry also includes a small pool of optional, semantically localized epithets.
+These packs contribute roughly **38,160 base given-name/family-name combinations** and use ancestry-specific structures including localized dwarf, halfling, goblin, and orc speaking names.
 
 ## Human cultures
 
@@ -56,7 +69,7 @@ api.content.registerNameCulture(...);
 api.content.registerNamePack(...);
 ```
 
-Human cultures appear automatically in NPC Forge's **Name Culture** selector. Ancestry-focused packs are exposed through the normal name-pack selection and participate in deterministic automatic resolution for their matching ancestry.
+Human cultures appear automatically in NPC Forge's **Name Culture** selector. Ancestry-focused packs participate in deterministic automatic resolution for their matching ancestry and remain available through the normal name-pack selection.
 
 If an external module such as Crowd Forge or City Forge supplies a fixed culture or pack ID, NPC Forge can use the corresponding content directly.
 
@@ -67,7 +80,7 @@ If an external module such as Crowd Forge or City Forge supplies a fixed culture
 - Stable seeded generation
 - German and English localization
 - Proper names remain proper names rather than being translated
-- Speaking names and epithets can use semantic localization
+- Speaking names, compositional names, and epithets can use semantic localization
 - Culture and ancestry packs remain modular and externally addressable
 - Existing NPC Forge core names remain available as fallback content
 
@@ -75,7 +88,7 @@ The names in this add-on are original, setting-inspired generator content. The m
 
 ## Planned expansion
 
-Future releases can add further Inner Sea human cultures and ancestry-focused packs for leshies, catfolk, hobgoblins, iruxi, kholo, kobolds, tengu, tripkees, ysoki, and other ancestries supported by NPC Forge.
+Future releases can add the remaining NPC Forge core ancestries, including tengu, tripkees, and ysoki, as well as additional regional human cultures and more specialized cultural variants for existing ancestry packs.
 
 ## Requirements
 

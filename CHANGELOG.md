@@ -1,5 +1,20 @@
 # Changelog
 
+## 0.3.0 – Ancestry Names II
+
+- Added ancestry-focused name packs for leshies, catfolk / Amurrun, hobgoblins, lizardfolk / iruxi, kholo, and kobolds.
+- Added roughly 43,344 new base names or full-name combinations, bringing the add-on to approximately 100,000 base combinations overall.
+- Added a fully compositional localized given-name generator for leshies.
+- Added compositional localized catfolk family names.
+- Added martial compositional hobgoblin family names.
+- Added environment- and scale-themed compositional iruxi family names.
+- Added pack-, trail-, and hunting-themed compositional kholo family names.
+- Added treasure-, tunnel-, and dragon-themed compositional kobold family names.
+- Added ancestry-specific localized epithets for all six new packs.
+- Kept all new ancestry packs culture-neutral so they remain universal fallback packs.
+- Expanded German and English localization.
+- Added validation for coverage, namespace ownership, pool density, generator density, localization parity, and public API registration.
+
 ## 0.2.0 – Ancestry Names I
 
 - Added ancestry-focused name packs for dwarves, elves, halflings, gnomes, goblins, and orcs.
