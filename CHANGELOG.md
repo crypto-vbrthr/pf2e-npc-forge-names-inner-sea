@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.7.1 – Phonetics, Localization & Release Quality Pass
+
+- Reworked the Absalomi tengu phonotactic generator to reduce exact overlap with the universal tengu pack from roughly 27% to 0%.
+- Removed accidental Absalomi tengu lexical outputs such as `Karen` and `Nein` by construction and added regression coverage.
+- Split Absalomi ysoki vowel-final and z-final roots into separate ending patterns, removing awkward outputs such as `Abii`, `Beriir`, `Cazzi`, `Fazzi`, and `Kezzi` while retaining 176 unique generated given names.
+- Added phonotactic seam-quality and tengu regional-separation tests.
+- Corrected German `Mordant Spire` localization to `Mordant-Spitze`.
+- Changed German `Numerian` localization from `Numerisch` to the clearer `Numerianisch`.
+- Improved German Dongun Hold compound morphology with `Funken-`, `Nieten-`, `-werker`, `Tiefen-`, and `-kind` components.
+- Added `npm run check:release`, which requires a real PF2E NPC Forge 1.1.2+ source checkout and fails if the integration dependency is unavailable instead of silently skipping the real-engine suite.
+- Updated real-engine integration seeds from the older `names-061-*` labels to `names-071-*`.
+- Corrected README wording from two to three completed regional expansion waves.
+- Retained 165,662 theoretical base combinations while increasing effective distinct base names to approximately 161,351.
+
 ## 0.7.0 – Regional & Cultural Expansion III
 
 - Added eight human cultural name packs: Absalomi, Druman, Galtan, Irriseni, Mendevian, Numerian, Razmiri, and River Kingdoms / Riverfolk.

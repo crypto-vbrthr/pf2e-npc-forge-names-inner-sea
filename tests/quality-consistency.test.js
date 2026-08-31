@@ -174,6 +174,40 @@ test("human cultural given-name pools stay meaningfully differentiated", () => {
   }
 });
 
+
+test("Absalomi tengu names stay distinct from universal tengu output and avoid lexical collisions", () => {
+  const universal = ANCESTRY_NAME_PACKS_III.find((pack) => pack.id === `${MODULE_ID}.tengu-inner-sea`);
+  const absalomi = REGIONAL_NAME_PACKS_III.find((pack) => pack.id === `${MODULE_ID}.tengu-absalomi`);
+  assert.ok(universal && absalomi);
+  const ratio = overlapRatio(givenValues(universal), givenValues(absalomi));
+  assert.ok(ratio <= 0.20, `Absalomi/universal tengu overlap ${(ratio * 100).toFixed(1)}%`);
+  const forbidden = new Set(["karen", "nein"]);
+  for (const name of givenValues(absalomi)) {
+    assert.ok(!forbidden.has(normalize(name)), `Absalomi tengu lexical collision: ${name}`);
+  }
+});
+
+test("Absalomi ysoki generator avoids doubled root/ending seams", () => {
+  const pack = REGIONAL_NAME_PACKS_III.find((entry) => entry.id === `${MODULE_ID}.ysoki-absalomi`);
+  assert.ok(pack);
+  const generator = pack.generators?.given;
+  assert.equal(generator?.type, "components");
+  for (const pattern of generator.patterns ?? []) {
+    assert.equal(pattern.length, 2, `${pack.id}: expected two-part seam pattern`);
+    const roots = generator.components?.[pattern[0]] ?? [];
+    const endings = generator.components?.[pattern[1]] ?? [];
+    for (const root of roots) for (const ending of endings) {
+      if (!ending) continue;
+      const left = String(root).at(-1)?.toLocaleLowerCase("en");
+      const right = String(ending).at(0)?.toLocaleLowerCase("en");
+      assert.notEqual(left, right, `${pack.id}: awkward doubled seam ${root} + ${ending}`);
+    }
+  }
+  for (const name of givenValues(pack)) {
+    assert.ok(!/(ii|zz)/i.test(name), `${pack.id}: awkward rendered seam ${name}`);
+  }
+});
+
 test("the expanded library exposes over 160,000 combinations and over 155,000 distinct base names", () => {
   let theoretical = 0;
   const unique = new Set();

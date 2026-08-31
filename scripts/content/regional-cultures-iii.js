@@ -176,9 +176,9 @@ export const REGIONAL_NAME_PACKS_III = Object.freeze([
     cultureIds: [`${MODULE_ID}.absalomi`], supportedLocales: LOCALES, weight: 14,
     generators: {
       given: componentGenerator([["onset", "vowel", "coda"]], {
-        onset: ["K", "Kr", "R", "S", "T", "V", "Z", "Ch", "Dr", "Qu", "J", "N"],
+        onset: ["B", "D", "G", "H", "J", "L", "N", "Q", "Ch", "Dr", "Th", "Y"],
         vowel: ["a", "e", "i", "o", "u", "ae", "io", "ei"],
-        coda: ["k", "r", "s", "t", "n", "v", "sh", "ren"]
+        coda: ["k", "r", "s", "t", "v", "sh", "ren", "lan"]
       })
     },
     epithets: [semantic("AbsalomiTengu.Epithet.HarborWing", "Harbor-Wing"), semantic("AbsalomiTengu.Epithet.HundredVoices", "Hundred-Voices")], epithetChance: 0.11
@@ -187,10 +187,15 @@ export const REGIONAL_NAME_PACKS_III = Object.freeze([
     id: `${MODULE_ID}.ysoki-absalomi`, labelKey: "NAMESINNERSEA.Pack.AbsalomiYsoki", ancestryIds: ["core.ratfolk"],
     cultureIds: [`${MODULE_ID}.absalomi`], supportedLocales: LOCALES, weight: 14,
     generators: {
-      given: componentGenerator([["root", "ending"]], {
-        root: ["Abi", "Beri", "Caz", "Deni", "Evi", "Faz", "Gari", "Hiri", "Javi", "Kez", "Lumi", "Mazi", "Neri", "Pavi", "Qari", "Reni", "Sabi", "Tavi", "Viri", "Wazi", "Yari", "Zeri"],
-        ending: ["", "k", "i", "a", "u", "en", "ir", "zi"]
-      })
+      given: componentGenerator(
+        [["vowelRoot", "vowelEnding"], ["zRoot", "zEnding"]],
+        {
+          vowelRoot: ["Abi", "Beri", "Deni", "Evi", "Gari", "Hiri", "Javi", "Lumi", "Mazi", "Neri", "Pavi", "Qari", "Reni", "Sabi", "Tavi", "Viri", "Yari", "Zeri"],
+          vowelEnding: ["", "k", "a", "u", "en", "r", "zi", "n"],
+          zRoot: ["Caz", "Faz", "Kez", "Waz"],
+          zEnding: ["", "k", "i", "a", "u", "en", "ir", "ar"]
+        }
+      )
     },
     epithets: [semantic("AbsalomiYsoki.Epithet.MarketEar", "Market-Ear"), semantic("AbsalomiYsoki.Epithet.FiveKeys", "Five-Keys"), semantic("AbsalomiYsoki.Epithet.HarborWhisker", "Harbor-Whisker")], epithetChance: 0.12
   }

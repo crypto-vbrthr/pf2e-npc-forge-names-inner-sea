@@ -7,7 +7,7 @@ import { registerRegionalCulturesII } from "./content/regional-cultures-ii.js";
 import { registerRegionalCulturesIII } from "./content/regional-cultures-iii.js";
 
 export const MODULE_ID = "pf2e-npc-forge-names-inner-sea";
-export const VERSION = "0.7.0";
+export const VERSION = "0.7.1";
 
 let registered = false;
 

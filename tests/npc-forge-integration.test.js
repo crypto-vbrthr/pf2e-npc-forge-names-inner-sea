@@ -66,7 +66,7 @@ if (!NPC_FORGE_ROOT) {
     const ancestries = ["core.elf", "core.dwarf", "core.orc", "core.tengu", "core.halfling", "core.goblin", "core.hobgoblin", "core.gnome", "core.ratfolk"];
     for (const ancestry of ancestries) {
       for (let i = 0; i < 40; i += 1) {
-        const npc = engine.generate({ seed: `names-061-auto-${ancestry}-${i}`, ancestry, identity: { nameLocale: "en" } });
+        const npc = engine.generate({ seed: `names-071-auto-${ancestry}-${i}`, ancestry, identity: { nameLocale: "en" } });
         assert.equal(npc.identity.nameCulture, null, `${ancestry} acquired ${npc.identity.nameCulture?.id}`);
         const pack = registry.get("namePacks", npc.identity.nameParts.packId);
         assert.ok(pack, npc.identity.nameParts.packId);
@@ -92,7 +92,7 @@ if (!NPC_FORGE_ROOT) {
       ["core.ratfolk", `${MODULE_ID}.absalomi`, `${MODULE_ID}.ysoki-absalomi`]
     ];
     for (const [ancestry, culture, expectedPack] of cases) {
-      const npc = engine.generate({ seed: `names-061-fixed-${ancestry}`, ancestry, identity: { nameCulture: culture, nameLocale: "en" } });
+      const npc = engine.generate({ seed: `names-071-fixed-${ancestry}`, ancestry, identity: { nameCulture: culture, nameLocale: "en" } });
       assert.equal(npc.identity.nameCulture?.id, culture);
       assert.equal(npc.identity.nameParts.packId, expectedPack);
     }

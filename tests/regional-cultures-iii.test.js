@@ -111,6 +111,20 @@ test("all 0.7.0 localization keys exist in both catalogs", () => {
   }
 });
 
+
+test("German 0.7.x regional labels and Dongun compounds stay idiomatic", () => {
+  const de = JSON.parse(fs.readFileSync(path.join(ROOT, "lang/de.json"), "utf8"));
+  assert.equal(de["NAMESINNERSEA.Culture.MordantSpire"], "Mordant-Spitze");
+  assert.equal(de["NAMESINNERSEA.Pack.MordantSpireElf"], "Elfennamen der Mordant-Spitze");
+  assert.equal(de["NAMESINNERSEA.Culture.Numerian"], "Numerianisch");
+  assert.equal(de["NAMESINNERSEA.Pack.NumerianHuman"], "Numerianische Menschennamen");
+  assert.equal(de["NAMESINNERSEA.DongunHold.Craft.Spark"], "Funken");
+  assert.equal(de["NAMESINNERSEA.DongunHold.Craft.Rivet"], "Nieten");
+  assert.equal(de["NAMESINNERSEA.DongunHold.CraftSuffix.Wright"], "werker");
+  assert.equal(de["NAMESINNERSEA.DongunHold.Hold.Deep"], "Tiefen");
+  assert.equal(de["NAMESINNERSEA.DongunHold.HoldSuffix.Born"], "kind");
+});
+
 test("0.7.0 registration stays on the public culture/name-pack API", () => {
   const cultures = [];
   const packs = [];

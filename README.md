@@ -4,6 +4,28 @@
 
 The add-on requires **PF2E NPC Forge 1.1.2 or newer**.
 
+## 0.7.1 – Phonetics, Localization & Release Quality Pass
+
+Version 0.7.1 is a focused polish release over the 0.7.0 regional expansion. It keeps the same cultural coverage and theoretical combination count while tightening phonetic output, German localization, and release-time integration validation.
+
+### Generator polish
+
+- **Absalomi tengu** now use a more distinct cosmopolitan phonotactic space. Exact overlap with the universal tengu generator is reduced from roughly 27% to **0%**, and accidental lexical outputs such as `Karen` and `Nein` are excluded by construction and regression tests.
+- **Absalomi ysoki** now split vowel-final and z-final roots across separate ending sets. This removes awkward seam outputs such as `Abii`, `Beriir`, `Cazzi`, `Fazzi`, and `Kezzi` while preserving **176 unique generated given names**.
+- New phonotactic quality tests check Absalomi tengu overlap/lexical collisions and root-ending seam collisions in the Absalomi ysoki generator.
+
+### German localization polish
+
+- `Mordant Spire` now renders as **Mordant-Spitze** in German, including the associated elf pack label.
+- `Numerian` now renders as **Numerianisch** rather than the ambiguous `Numerisch`.
+- Dongun Hold compound components were adjusted for more natural German compounds: `Funken-`, `Nieten-`, `-werker`, `Tiefen-`, and `-kind` replace several rough forms from 0.7.0.
+
+### Release validation
+
+A new `npm run check:release` command requires an actual **PF2E NPC Forge 1.1.2+ source checkout** through `PF2E_NPC_FORGE_SOURCE` (or a sibling source folder) and fails instead of silently skipping the real-engine integration suite when the dependency source is unavailable. Integration-test seed labels were also updated from the older 0.6.1 naming.
+
+The library still exposes **165,662 possible base combinations**, now representing approximately **161,351 distinct base names** before optional epithets.
+
 ## 0.7.0 – Regional & Cultural Expansion III
 
 Version 0.7.0 expands the regional layer with eight additional human cultural styles and five ancestry-specific variants. The release keeps the stricter generator-quality rules introduced in 0.6.1 while adding more urban, northern, frontier, and specialist regional identities.
@@ -243,7 +265,7 @@ The names in this add-on are original, setting-inspired generator content. The m
 
 ## Planned expansion
 
-With all current NPC Forge core ancestries covered and two regional expansion waves in place, future releases can deepen selected cultures, add city- or nation-specific variants where they create a genuinely different naming style, and continue quality, weighting, and duplication review across the complete library.
+With all current NPC Forge core ancestries covered and three regional expansion waves in place, future releases can deepen selected cultures, add city- or nation-specific variants where they create a genuinely different naming style, and continue quality, weighting, and duplication review across the complete library.
 
 ## Requirements
 
