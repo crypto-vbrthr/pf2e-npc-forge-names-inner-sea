@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.5.0 – Regional & Cultural Expansion I
+
+- Added eight further human cultural name packs: Shoanti, Kellid, Mwangi, Vudrani, Sarkorian, Brevic, Rahadoumi, and Nidalese.
+- Added regional nonhuman cultures and name packs for Kyonin elves, Five Kings dwarves, and Belkzen orcs.
+- Added Varisian-, Taldan-, and Chelish-influenced migrant tengu name packs.
+- Extended the existing Varisian, Taldan, and Chelish culture definitions to allow tengu cultural variants without weakening ancestry fallback behavior.
+- Added 26,112 additional base regional naming combinations, bringing the library to roughly 131,098 base names or full-name combinations before optional epithets.
+- Added semantically localized regional epithets and compositional Five Kings dwarf and Belkzen orc family names.
+- Kept all new content on the public NPC Forge 1.1.0 cultural-name API.
+- Added validation for regional culture references, migrant tengu support, content density, namespace ownership, localization parity, and public API registration.
+
 ## 0.4.0 – Ancestry Names III
 
 - Added ancestry-focused name packs for tengu, tripkees, and ratfolk / ysoki.

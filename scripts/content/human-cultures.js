@@ -1,5 +1,6 @@
 const MODULE_ID = "pf2e-npc-forge-names-inner-sea";
 const HUMAN = ["core.human"];
+const HUMAN_TENGU = ["core.human", "core.tengu"];
 const LOCALES = ["en", "de"];
 
 const semantic = (key, fallback) => ({
@@ -9,9 +10,9 @@ const semantic = (key, fallback) => ({
 });
 
 export const HUMAN_CULTURES = Object.freeze([
-  { id: `${MODULE_ID}.taldan`, labelKey: "NAMESINNERSEA.Culture.Taldan", ancestryIds: HUMAN, supportedLocales: LOCALES, weight: 10 },
-  { id: `${MODULE_ID}.chelish`, labelKey: "NAMESINNERSEA.Culture.Chelish", ancestryIds: HUMAN, supportedLocales: LOCALES, weight: 10 },
-  { id: `${MODULE_ID}.varisian`, labelKey: "NAMESINNERSEA.Culture.Varisian", ancestryIds: HUMAN, supportedLocales: LOCALES, weight: 10 },
+  { id: `${MODULE_ID}.taldan`, labelKey: "NAMESINNERSEA.Culture.Taldan", ancestryIds: HUMAN_TENGU, supportedLocales: LOCALES, weight: 10 },
+  { id: `${MODULE_ID}.chelish`, labelKey: "NAMESINNERSEA.Culture.Chelish", ancestryIds: HUMAN_TENGU, supportedLocales: LOCALES, weight: 10 },
+  { id: `${MODULE_ID}.varisian`, labelKey: "NAMESINNERSEA.Culture.Varisian", ancestryIds: HUMAN_TENGU, supportedLocales: LOCALES, weight: 10 },
   { id: `${MODULE_ID}.ulfen`, labelKey: "NAMESINNERSEA.Culture.Ulfen", ancestryIds: HUMAN, supportedLocales: LOCALES, weight: 8 },
   { id: `${MODULE_ID}.osiriani`, labelKey: "NAMESINNERSEA.Culture.Osiriani", ancestryIds: HUMAN, supportedLocales: LOCALES, weight: 9 },
   { id: `${MODULE_ID}.keleshite`, labelKey: "NAMESINNERSEA.Culture.Keleshite", ancestryIds: HUMAN, supportedLocales: LOCALES, weight: 9 },

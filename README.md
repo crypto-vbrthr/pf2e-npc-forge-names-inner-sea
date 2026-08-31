@@ -4,6 +4,42 @@
 
 The add-on requires **PF2E NPC Forge 1.1.0 or newer**.
 
+## 0.5.0 – Regional & Cultural Expansion I
+
+Version 0.5.0 moves beyond universal ancestry pools and expands regional identity across the Inner Sea. It adds eight further human cultural styles:
+
+- Shoanti
+- Kellid
+- Mwangi
+- Vudrani
+- Sarkorian
+- Brevic
+- Rahadoumi
+- Nidalese
+
+It also introduces the first ancestry-specific regional cultures:
+
+- Kyonin elves
+- Five Kings dwarves
+- Belkzen orcs
+
+and three migrant-tengu variants influenced by Varisian, Taldan, and Chelish naming environments. These tengu packs retain tengu phonetic structure while borrowing regional cadence and localized epithets rather than simply assigning human names to tengu.
+
+The release contributes **26,112 additional base regional naming combinations**, bringing the library to approximately **131,098 base names or full-name combinations** before optional epithets are considered.
+
+### Regional selection
+
+The new packs use NPC Forge's cultural-name layer directly. Selecting a culture such as **Kyonin**, **Five Kings Mountains**, or **Belkzen** narrows generation to a matching ancestry-specific regional pack. Varisian, Taldan, and Chelish cultures now also appear for tengu because those cultures have dedicated migrant variants.
+
+Universal ancestry packs from versions 0.2.0–0.4.0 remain available as fallbacks. A dwarf without a selected Five Kings culture therefore still receives a normal dwarf name, and an unavailable regional pack never causes NPC Forge to cross ancestry boundaries.
+
+### Naming styles
+
+- **Five Kings dwarves** use dense forge-, stone-, ore-, and mountain-themed compositional family names with semantic German/English localization.
+- **Belkzen orcs** use clan-like compositional family names built from martial, scar, bone, beast, and battlefield imagery.
+- **Kyonin elves** use a more formal regional proper-name pool distinct from the universal elf pack.
+- **Migrant tengu** use region-influenced compositional given names without mandatory family names, preserving a recognizably tengu structure while reflecting surrounding cultures.
+
 ## 0.4.0 – Ancestry Names III
 
 Version 0.4.0 completes expanded-name coverage for all ancestries currently supported by NPC Forge by adding:
@@ -108,7 +144,7 @@ The names in this add-on are original, setting-inspired generator content. The m
 
 ## Planned expansion
 
-With all current NPC Forge core ancestries covered, future releases can focus on additional regional human cultures, migrant-tengu cultural variants, specialized nonhuman regional packs, and further quality and duplication review of the complete name library.
+With all current NPC Forge core ancestries covered and the first regional layer in place, future releases can deepen additional Inner Sea regions, add further ancestry-specific cultural variants, and perform quality, weighting, and duplication review across the complete library.
 
 ## Requirements
 
