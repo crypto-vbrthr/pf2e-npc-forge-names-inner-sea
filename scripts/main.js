@@ -1,7 +1,8 @@
 import { registerHumanCultures } from "./content/human-cultures.js";
+import { registerAncestryNamesI } from "./content/ancestry-names-i.js";
 
 export const MODULE_ID = "pf2e-npc-forge-names-inner-sea";
-export const VERSION = "0.1.0";
+export const VERSION = "0.2.0";
 
 let registered = false;
 
@@ -16,6 +17,7 @@ export function registerContent(api) {
     return false;
   }
   registerHumanCultures(api);
+  registerAncestryNamesI(api);
   registered = true;
   console.log(`${MODULE_ID} | Registered Names of the Inner Sea ${VERSION}`);
   return true;

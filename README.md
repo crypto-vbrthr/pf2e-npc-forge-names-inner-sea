@@ -4,9 +4,37 @@
 
 The add-on requires **PF2E NPC Forge 1.1.0 or newer**.
 
-## 0.1.0 – Human Cultures I
+## 0.2.0 – Ancestry Names I
 
-The first release establishes the add-on framework and adds eight human naming cultures:
+Version 0.2.0 expands the add-on beyond human regional cultures with six ancestry-focused name packs:
+
+- Dwarf
+- Elf
+- Halfling
+- Gnome
+- Goblin
+- Orc
+
+These packs are registered as universal ancestry packs rather than artificial regional cultures. They therefore work as expanded name pools for the corresponding ancestry anywhere in the Inner Sea region and remain available as fallbacks if no more specific cultural pack exists.
+
+The six new packs add roughly **38,160 base given-name/family-name combinations**. Together with the human cultures from 0.1.0, the add-on now exposes approximately **56,760 base combinations** before optional epithets are considered.
+
+### Ancestry-specific naming styles
+
+The packs intentionally do not force every ancestry into the same `given name + static surname` pattern:
+
+- **Dwarves** use solid given names and compositional, localized craft- and stone-themed family names such as `Ironhammer` / `Eisenhammer`.
+- **Elves** use flowing proper given and family names that remain untranslated.
+- **Halflings** use approachable given names and compositional speaking family names such as `Greenleaf` / `Grünblatt`.
+- **Gnomes** use playful proper names and whimsical family names.
+- **Goblins** use short given names plus highly descriptive compositional surnames such as `Sootface` / `Rußgesicht`.
+- **Orcs** use strong given names and compositional clan-style family names such as `Ironfist` / `Eisenfaust`.
+
+Each ancestry also includes a small pool of optional, semantically localized epithets.
+
+## Human cultures
+
+The human culture packs introduced in 0.1.0 remain included:
 
 - Taldan
 - Chelish
@@ -17,9 +45,7 @@ The first release establishes the add-on framework and adds eight human naming c
 - Ustalavic
 - Andoren
 
-Each culture provides gender-aware given names, family names, and a small pool of optional epithets. Ulfen family names additionally use NPC Forge's compositional naming support, producing localized speaking names such as `Ironhand` / `Eisenhand` from semantic components.
-
-Across the eight packs, 0.1.0 provides roughly **18,600 base given-name/family-name combinations** before optional epithets are considered.
+Each culture provides gender-aware given names, family names, and optional epithets. Ulfen family names use NPC Forge's compositional naming support, producing localized speaking names such as `Ironhand` / `Eisenhand` from semantic components.
 
 ## How it works
 
@@ -30,25 +56,26 @@ api.content.registerNameCulture(...);
 api.content.registerNamePack(...);
 ```
 
-The new cultures then appear automatically in NPC Forge's **Name Culture** selector for human NPCs. Selecting **Automatic** lets NPC Forge resolve one of the installed cultures using deterministic weighted generation.
+Human cultures appear automatically in NPC Forge's **Name Culture** selector. Ancestry-focused packs are exposed through the normal name-pack selection and participate in deterministic automatic resolution for their matching ancestry.
 
-If an external module such as Crowd Forge or City Forge later supplies a fixed culture ID, NPC Forge can use the corresponding name pool directly.
+If an external module such as Crowd Forge or City Forge supplies a fixed culture or pack ID, NPC Forge can use the corresponding content directly.
 
 ## Design goals
 
 - Large name variety without duplicating NPC Forge logic
+- Ancestry-appropriate naming structures rather than one universal naming formula
 - Stable seeded generation
 - German and English localization
 - Proper names remain proper names rather than being translated
 - Speaking names and epithets can use semantic localization
-- Culture packs remain modular and externally addressable
+- Culture and ancestry packs remain modular and externally addressable
 - Existing NPC Forge core names remain available as fallback content
 
 The names in this add-on are original, setting-inspired generator content. The module is not intended to reproduce lists of named characters from published Pathfinder material.
 
 ## Planned expansion
 
-Future releases can add further Inner Sea human cultures and expanded ancestry-focused packs for dwarves, elves, halflings, gnomes, goblins, orcs, kobolds, tengu, ysoki, and the other ancestries supported by NPC Forge.
+Future releases can add further Inner Sea human cultures and ancestry-focused packs for leshies, catfolk, hobgoblins, iruxi, kholo, kobolds, tengu, tripkees, ysoki, and other ancestries supported by NPC Forge.
 
 ## Requirements
 
