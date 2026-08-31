@@ -34,7 +34,8 @@ function generatorValues(generator, catalog = en) {
     let partial = [""];
     for (const key of pattern) {
       const pool = generator.components?.[key] ?? [];
-      partial = partial.flatMap((prefix) => pool.map((entry) => `${prefix}${value(entry, catalog)}`));
+      const separator = typeof generator.separator === "string" ? generator.separator : "";
+      partial = partial.flatMap((prefix) => pool.map((entry) => `${prefix}${prefix ? separator : ""}${value(entry, catalog)}`));
     }
     out.push(...partial);
   }
@@ -98,6 +99,32 @@ test("component generators never produce immediate doubled words in English or G
   }
 });
 
+
+
+test("all component generators produce unique rendered outputs in English and German", () => {
+  for (const catalog of [en, de]) {
+    for (const pack of ALL_PACKS) {
+      const generators = [
+        ...Object.entries(pack.generators ?? {}).map(([part, generator]) => [part, generator]),
+        ...(pack.generator?.type === "components" ? [["legacy-given", pack.generator]] : [])
+      ];
+      for (const [part, generator] of generators) {
+        const rendered = generatorValues(generator, catalog);
+        const normalized = rendered.map(normalize);
+        assert.equal(new Set(normalized).size, normalized.length, `${pack.id} ${part} has duplicate rendered component outputs`);
+      }
+    }
+  }
+});
+
+test("Oprak family names are clearly distinct from the universal hobgoblin family generator", () => {
+  const universal = ANCESTRY_NAME_PACKS_II.find((pack) => pack.id === `${MODULE_ID}.hobgoblin-inner-sea`);
+  const oprak = REGIONAL_NAME_PACKS_II.find((pack) => pack.id === `${MODULE_ID}.hobgoblin-oprak`);
+  assert.ok(universal && oprak);
+  const ratio = overlapRatio(familyValues(universal), familyValues(oprak));
+  assert.ok(ratio <= 0.10, `Oprak/universal hobgoblin family overlap ${(ratio * 100).toFixed(1)}%`);
+});
+
 test("descriptive regional family names use semantic localized entries", () => {
   const targets = new Map([
     [`${MODULE_ID}.human-shoanti`, ["Blackstone", "Ironcliff", "Stormtrail"]],
@@ -126,10 +153,10 @@ test("human cultural given-name pools stay meaningfully differentiated", () => {
       const b = HUMAN_PACKS[j];
       for (const gender of ["male", "female", "neutral"]) {
         const ratio = overlapRatio(a.given?.[gender] ?? [], b.given?.[gender] ?? []);
-        assert.ok(ratio <= 0.45, `${a.id} vs ${b.id} (${gender}) overlap ${(ratio * 100).toFixed(1)}%`);
+        assert.ok(ratio <= 0.30, `${a.id} vs ${b.id} (${gender}) overlap ${(ratio * 100).toFixed(1)}%`);
       }
       const familyRatio = overlapRatio(familyValues(a), familyValues(b));
-      assert.ok(familyRatio <= 0.45, `${a.id} vs ${b.id} family overlap ${(familyRatio * 100).toFixed(1)}%`);
+      assert.ok(familyRatio <= 0.30, `${a.id} vs ${b.id} family overlap ${(familyRatio * 100).toFixed(1)}%`);
     }
   }
 });

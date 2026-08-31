@@ -92,7 +92,7 @@ export const REGIONAL_NAME_PACKS = Object.freeze([
     given: {
       male: ["Aren", "Bregan", "Corren", "Davor", "Eiran", "Ferren", "Galen", "Hadrik", "Iven", "Joran", "Kael", "Loric", "Maren", "Nerin", "Orren", "Perrik", "Rovan", "Saren", "Toren", "Urik", "Varan", "Wren"],
       female: ["Aila", "Brena", "Cerys", "Dara", "Eira", "Fenna", "Gwenna", "Hela", "Iria", "Jessa", "Kara", "Liora", "Mara", "Nessa", "Orla", "Pera", "Rhea", "Sena", "Talia", "Una", "Vela", "Willa"],
-      neutral: ["Ari", "Cair", "Eri", "Fen", "Ira", "Lio", "Maren", "Ren", "Tavi", "Wren"]
+      neutral: ["Ari", "Cair", "Eren", "Fen", "Ira", "Lorin", "Maren", "Ren", "Tavi", "Wren"]
     },
     family: [semantic("Sarkorian.Family.Ashgrove", "Ashgrove"), semantic("Sarkorian.Family.Briarward", "Briarward"), semantic("Sarkorian.Family.Cairnwatch", "Cairnwatch"), semantic("Sarkorian.Family.Deerpath", "Deerpath"), semantic("Sarkorian.Family.Elderwood", "Elderwood"), semantic("Sarkorian.Family.Fernwalker", "Fernwalker"), semantic("Sarkorian.Family.Greenmantle", "Greenmantle"), semantic("Sarkorian.Family.Hartgrove", "Hartgrove"), semantic("Sarkorian.Family.Ivyward", "Ivyward"), semantic("Sarkorian.Family.Juniper", "Juniper"), semantic("Sarkorian.Family.Mossbrook", "Mossbrook"), semantic("Sarkorian.Family.Oakensong", "Oakensong"), semantic("Sarkorian.Family.Pineward", "Pineward"), semantic("Sarkorian.Family.Ravenwood", "Ravenwood"), semantic("Sarkorian.Family.Rowanmark", "Rowanmark"), semantic("Sarkorian.Family.Spiritgrove", "Spiritgrove"), semantic("Sarkorian.Family.Stagwatch", "Stagwatch"), semantic("Sarkorian.Family.Thornward", "Thornward"), semantic("Sarkorian.Family.Willowmark", "Willowmark"), semantic("Sarkorian.Family.Wolfgrove", "Wolfgrove"), semantic("Sarkorian.Family.Yewsong", "Yewsong"), semantic("Sarkorian.Family.Stonecircle", "Stonecircle"), semantic("Sarkorian.Family.Mooncairn", "Mooncairn"), semantic("Sarkorian.Family.Wildbranch", "Wildbranch")],
     epithets: humanEpithet.sarkorian, epithetChance: 0.09
@@ -101,8 +101,8 @@ export const REGIONAL_NAME_PACKS = Object.freeze([
     id: `${MODULE_ID}.human-brevic`, labelKey: "NAMESINNERSEA.Pack.BrevicHuman", ancestryIds: H,
     cultureIds: [`${MODULE_ID}.brevic`], supportedLocales: LOCALES, weight: 12,
     given: {
-      male: ["Alek", "Boris", "Dmitar", "Evgen", "Fyodor", "Gavril", "Ilya", "Kirill", "Lev", "Mikhail", "Nikol", "Oleg", "Pavel", "Radomir", "Sergei", "Tomas", "Vadim", "Viktor", "Yakov", "Yuri", "Zarek", "Anton"],
-      female: ["Anya", "Daria", "Elena", "Galina", "Irina", "Katya", "Lada", "Marina", "Nadia", "Oksana", "Polina", "Raisa", "Sasha", "Svetla", "Tanya", "Valya", "Vera", "Yelena", "Zoya", "Alina", "Mira", "Sonya"],
+      male: ["Alek", "Boris", "Dmitar", "Evgen", "Fyodor", "Gavril", "Ilyan", "Kirill", "Lev", "Mikhail", "Nikol", "Oskar", "Pavel", "Radomir", "Sergei", "Tomas", "Vadin", "Viktar", "Yakov", "Yuri", "Zadek", "Anton"],
+      female: ["Anya", "Darena", "Elena", "Galina", "Irina", "Katya", "Ludmila", "Marina", "Nadia", "Ksena", "Polina", "Raisa", "Sasha", "Svetla", "Tanya", "Valya", "Vera", "Yelena", "Zoya", "Alina", "Mira", "Sonya"],
       neutral: ["Misha", "Sava", "Zhenya", "Rada", "Bora", "Kiril", "Luka", "Mirko", "Slava", "Zorya"]
     },
     family: ["Aldorin", "Berezov", "Chernov", "Dragun", "Elisarov", "Fedoren", "Gavrin", "Ilvarov", "Karsov", "Lebedev", "Mirov", "Nazarov", "Orlov", "Petren", "Radovin", "Sokolov", "Taranov", "Velesov", "Volarin", "Yarovin", "Zorin", "Kozarin", "Morozin", "Stoyan"],
@@ -124,7 +124,7 @@ export const REGIONAL_NAME_PACKS = Object.freeze([
     cultureIds: [`${MODULE_ID}.nidalese`], supportedLocales: LOCALES, weight: 12,
     given: {
       male: ["Adrian", "Beren", "Corvin", "Darian", "Edrik", "Ferran", "Gavren", "Hadrin", "Iven", "Jarek", "Korven", "Lucan", "Marek", "Nerian", "Oren", "Pavel", "Rovan", "Severin", "Tavian", "Valen", "Varek", "Zorin"],
-      female: ["Adela", "Bela", "Celia", "Daria", "Elena", "Fiora", "Gavria", "Helena", "Irina", "Jessa", "Kora", "Livia", "Mara", "Neria", "Olia", "Petra", "Ravia", "Sabina", "Talia", "Vera", "Vesna", "Zara"],
+      female: ["Adria", "Bela", "Celia", "Daria", "Elena", "Fiora", "Gavria", "Helena", "Iriana", "Jessa", "Kora", "Livia", "Mara", "Neria", "Olia", "Petria", "Ravia", "Sabina", "Talia", "Vera", "Vesna", "Zara"],
       neutral: ["Aren", "Cyr", "Eris", "Iven", "Kael", "Lorn", "Mora", "Riven", "Sera", "Vey"]
     },
     family: [semantic("Nidalese.Family.Ashveil", "Ashveil"), semantic("Nidalese.Family.Blackmere", "Blackmere"), semantic("Nidalese.Family.Candlewick", "Candlewick"), "Duskryn", semantic("Nidalese.Family.Evenfall", "Evenfall"), "Graven", semantic("Nidalese.Family.Holloway", "Holloway"), "Ivoryn", "Karsen", semantic("Nidalese.Family.Lowmere", "Lowmere"), semantic("Nidalese.Family.Mournwell", "Mournwell"), semantic("Nidalese.Family.Nightvale", "Nightvale"), semantic("Nidalese.Family.Palevine", "Palevine"), semantic("Nidalese.Family.Ravenmere", "Ravenmere"), semantic("Nidalese.Family.Shadecroft", "Shadecroft"), semantic("Nidalese.Family.Stillwater", "Stillwater"), semantic("Nidalese.Family.Thornevale", "Thornevale"), "Umber", "Velloran", semantic("Nidalese.Family.Whitethorn", "Whitethorn"), semantic("Nidalese.Family.Wraithmere", "Wraithmere"), "Yarrowen", semantic("Nidalese.Family.Darkwell", "Darkwell"), semantic("Nidalese.Family.Gloamridge", "Gloamridge")],

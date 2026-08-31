@@ -46,7 +46,12 @@ test("all 0.4.0 pack and semantic IDs are namespaced", () => {
 test("Tengu use a dense traditional-style compositional given-name generator", () => {
   const pack = ANCESTRY_NAME_PACKS_III.find((entry) => entry.ancestryIds.includes("core.tengu"));
   assert.equal(pack.generators.given.type, "components");
-  assert.ok(generatorCombinationCount(pack.generators.given) >= 2500);
+  const count = generatorCombinationCount(pack.generators.given);
+  assert.ok(count >= 1100);
+  const generator = pack.generators.given;
+  let names = [""];
+  for (const key of generator.patterns[0]) names = names.flatMap((prefix) => generator.components[key].map((part) => `${prefix}${part}`));
+  assert.equal(new Set(names).size, names.length, "Tengu generator should not contain duplicate output paths");
   assert.ok(!pack.family && !pack.generators.family);
 });
 
@@ -68,9 +73,9 @@ test("Ysoki names model a recurring family-name stock through roots and small va
   assert.ok(!pack.family && !pack.generators.family);
 });
 
-test("0.4.0 contributes at least 4,700 additional base given names", () => {
+test("the current Ancestry Names III block retains at least 3,400 high-quality base given names", () => {
   const combinations = ANCESTRY_NAME_PACKS_III.reduce((sum, pack) => sum + generatorCombinationCount(pack.generators.given), 0);
-  assert.ok(combinations >= 4700, `only ${combinations} combinations`);
+  assert.ok(combinations >= 3400, `only ${combinations} combinations`);
 });
 
 test("all 0.4.0 localization keys exist in both catalogs", () => {

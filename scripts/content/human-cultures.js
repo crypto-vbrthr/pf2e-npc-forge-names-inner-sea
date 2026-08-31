@@ -136,7 +136,7 @@ export const HUMAN_NAME_PACKS = Object.freeze([
     given: {
       male: ["Ardash", "Bahram", "Cyrus", "Daryun", "Farid", "Housan", "Iskandar", "Javid", "Kamran", "Kaveh", "Mehrad", "Navid", "Omid", "Parviz", "Ramin", "Rostam", "Salar", "Shapur", "Tahir", "Vahid", "Xerun", "Yazdan", "Zamir", "Zarvan"],
       female: ["Anahita", "Azadeh", "Darya", "Farzaneh", "Golara", "Jaleh", "Laleh", "Mina", "Nasrin", "Parisa", "Roxana", "Sahar", "Samira", "Setareh", "Shirin", "Soraya", "Tahmina", "Yasaman", "Zahra", "Zarin", "Ziba", "Zohra", "Nava", "Roya"],
-      neutral: ["Arin", "Dara", "Farah", "Jahan", "Kian", "Mehr", "Nuri", "Rahi", "Sami", "Shah", "Yara", "Zarin"]
+      neutral: ["Arin", "Darye", "Farah", "Jahan", "Kian", "Mehr", "Nivan", "Rahi", "Samad", "Shah", "Yasha", "Zarin"]
     },
     family: ["Arzadi", "Bahrami", "Darvashi", "Farzadi", "Golestan", "Javadi", "Kashani", "Mehrani", "Navari", "Naziri", "Parvani", "Rostami", "Sadeghi", "Sarvani", "Shahrani", "Taheri", "Vahidi", "Yazdani", "Zamani", "Zarandi", "Azarin", "Daryani", "Firdosi", "Kaviani", "Mehrzad", "Neshari", "Ravandi", "Salarin", "Varzani", "Zohari"],
     epithets: [...commonEpithets, semantic("Epithet.Silvertongue", "Silver-Tongue"), semantic("Epithet.FarTraveler", "the Far Traveler")],

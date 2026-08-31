@@ -6,18 +6,22 @@ import { registerRegionalCultures } from "./content/regional-cultures.js";
 import { registerRegionalCulturesII } from "./content/regional-cultures-ii.js";
 
 export const MODULE_ID = "pf2e-npc-forge-names-inner-sea";
-export const VERSION = "0.6.0";
+export const VERSION = "0.6.1";
 
 let registered = false;
 
 export function registerContent(api) {
   if (registered) return true;
   if (!api?.content?.registerNameCulture || !api?.content?.registerNamePack) {
-    console.warn(`${MODULE_ID} | PF2E NPC Forge 1.1.1+ cultural-name API is unavailable.`);
+    console.warn(`${MODULE_ID} | PF2E NPC Forge 1.1.2+ cultural-name API is unavailable.`);
     return false;
   }
   if (api.capabilities instanceof Set && !api.capabilities.has("cultural-name-generation")) {
     console.warn(`${MODULE_ID} | PF2E NPC Forge does not advertise cultural-name-generation.`);
+    return false;
+  }
+  if (api.capabilities instanceof Set && !api.capabilities.has("deduplicated-name-pools")) {
+    console.warn(`${MODULE_ID} | PF2E NPC Forge 1.1.2+ deduplicated-name-pools capability is required.`);
     return false;
   }
   registerHumanCultures(api);

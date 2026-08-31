@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.6.1 – Generator Quality Pass
+
+- Updated the minimum dependency to PF2E NPC Forge 1.1.2 and require the `deduplicated-name-pools` capability at runtime.
+- Rebuilt the universal tengu phonetic generator to provide 1,152 unique outputs with no duplicate generation paths and fewer repetitive syllable constructions.
+- Reworked Oprak hobgoblin family-name components around oath, duty, law, command, cohort, legion, phalanx, bastion, and citadel motifs.
+- Reduced exact Oprak/universal hobgoblin family-name overlap from roughly 40% to 0%.
+- Reduced several remaining high-overlap human given-name pools, including Brevic, Sarkorian, Nidalese, and Keleshite content.
+- Tightened the automated human cross-culture overlap ceiling from 45% to 30%.
+- Fixed a German kobold composite collision by distinguishing `fang` (`fangzahn`) from `tooth` (`zahn`).
+- Added a rendered composite-output uniqueness test across both English and German catalogs.
+- Added a dedicated Oprak/universal hobgoblin separation test.
+- Added an optional real-engine integration suite for NPC Forge 1.1.2+ via `PF2E_NPC_FORGE_SOURCE`, exercising the actual Content Registry and NPC Engine.
+- The deliberately pruned library now exposes 144,942 possible base naming combinations and approximately 141,346 distinct base names before optional epithets.
+
 ## 0.6.0 – Regional & Cultural Expansion II
 
 - Added six further human cultural name packs: Isgeri, Molthuni, Thuvian, Katapeshi, Nexian, and Gebbite.

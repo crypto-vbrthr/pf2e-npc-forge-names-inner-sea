@@ -44,15 +44,11 @@ export const ANCESTRY_NAME_PACKS_III = Object.freeze([
     weight: 12,
     generators: {
       given: componentGenerator(
-        [
-          ["onset", "middle", "ending"],
-          ["onset", "middle", "shortEnding"]
-        ],
+        [["onset", "vowel", "coda"]],
         {
-          onset: ["Ka", "Ko", "Ku", "Ma", "Mo", "Pu", "Ra", "Ro", "Ru", "Ta", "To", "Tsu"],
-          middle: ["ka", "ko", "ra", "ro", "ri", "ru", "sa", "sha", "ta", "to", "do", "ma"],
-          ending: ["k", "ka", "kara", "rel", "riel", "rra", "sha", "ta", "tara", "tor"],
-          shortEnding: ["k", "ra", "ri", "ruk", "ta", "to", "sha", "ko"]
+          onset: ["K", "M", "P", "R", "S", "Sh", "T", "Ts", "V", "Z", "Kr", "Tr"],
+          vowel: ["a", "e", "i", "o", "u", "ai", "ei", "ou"],
+          coda: ["n", "k", "r", "m", "s", "sh", "ra", "to", "zen", "rin", "dor", "vek"]
         }
       )
     },

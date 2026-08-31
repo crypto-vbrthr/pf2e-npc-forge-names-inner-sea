@@ -133,10 +133,15 @@ export const REGIONAL_NAME_PACKS_II = Object.freeze([
       neutral: ["Arv", "Bask", "Darg", "Hask", "Kavr", "Narek", "Sov", "Targ", "Vask", "Zorv"]
     },
     generators: {
-      family: componentGenerator([["prefix", "suffix"]], {
-        prefix: [semantic("Oprak.Prefix.Iron", "Iron"), semantic("Oprak.Prefix.Steel", "Steel"), semantic("Oprak.Prefix.Red", "Red"), semantic("Oprak.Prefix.Black", "Black"), semantic("Oprak.Prefix.High", "High"), semantic("Oprak.Prefix.Stone", "Stone"), semantic("Oprak.Prefix.Bright", "Bright"), semantic("Oprak.Prefix.Grim", "Grim"), semantic("Oprak.Prefix.Spear", "Spear"), semantic("Oprak.Prefix.Shield", "Shield"), semantic("Oprak.Prefix.Banner", "Banner"), semantic("Oprak.Prefix.Oath", "Oath")],
-        suffix: [semantic("Oprak.Suffix.Guard", "guard"), semantic("Oprak.Suffix.Line", "line"), semantic("Oprak.Suffix.Watch", "watch"), semantic("Oprak.Suffix.Mark", "mark"), semantic("Oprak.Suffix.Ward", "ward"), semantic("Oprak.Suffix.March", "march"), semantic("Oprak.Suffix.Crest", "crest"), semantic("Oprak.Suffix.Hand", "hand"), semantic("Oprak.Suffix.Vow", "vow"), semantic("Oprak.Suffix.Gate", "gate")]
-      })
+      family: componentGenerator(
+        [["virtue", "virtueSuffix"], ["formation", "formationSuffix"]],
+        {
+          virtue: [semantic("Oprak.Virtue.Oath", "Oath"), semantic("Oprak.Virtue.Duty", "Duty"), semantic("Oprak.Virtue.Honor", "Honor"), semantic("Oprak.Virtue.Law", "Law"), semantic("Oprak.Virtue.Vigil", "Vigil"), semantic("Oprak.Virtue.Order", "Order")],
+          virtueSuffix: [semantic("Oprak.VirtueSuffix.Keeper", "keeper"), semantic("Oprak.VirtueSuffix.Bearer", "bearer"), semantic("Oprak.VirtueSuffix.Bound", "bound"), semantic("Oprak.VirtueSuffix.Mark", "mark"), semantic("Oprak.VirtueSuffix.Seal", "seal"), semantic("Oprak.VirtueSuffix.Hand", "hand")],
+          formation: [semantic("Oprak.Formation.Cohort", "Cohort"), semantic("Oprak.Formation.Legion", "Legion"), semantic("Oprak.Formation.Column", "Column"), semantic("Oprak.Formation.Phalanx", "Phalanx"), semantic("Oprak.Formation.Bastion", "Bastion"), semantic("Oprak.Formation.Citadel", "Citadel"), semantic("Oprak.Formation.Command", "Command")],
+          formationSuffix: [semantic("Oprak.FormationSuffix.Guard", "guard"), semantic("Oprak.FormationSuffix.Watch", "watch"), semantic("Oprak.FormationSuffix.Post", "post"), semantic("Oprak.FormationSuffix.Gate", "gate"), semantic("Oprak.FormationSuffix.Crest", "crest"), semantic("Oprak.FormationSuffix.Helm", "helm")]
+        }
+      )
     },
     epithets: [semantic("Oprak.Epithet.LineHolder", "Line-Holder"), semantic("Oprak.Epithet.OathBound", "Oath-Bound")], epithetChance: 0.08
   },

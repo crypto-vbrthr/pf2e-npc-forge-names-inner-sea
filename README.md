@@ -2,7 +2,29 @@
 
 **Names of the Inner Sea** is a cultural name expansion for **PF2E NPC Forge**. It adds large, setting-inspired name pools for characters from the Inner Sea region while leaving all generation logic in NPC Forge itself.
 
-The add-on requires **PF2E NPC Forge 1.1.1 or newer**.
+The add-on requires **PF2E NPC Forge 1.1.2 or newer**.
+
+## 0.6.1 – Generator Quality Pass
+
+Version 0.6.1 is a focused generator-quality release. It deliberately trades a small amount of theoretical combination count for cleaner output, stronger regional differentiation, and automated integration coverage against the real NPC Forge naming engine.
+
+### Generator cleanup
+
+- The universal **tengu** generator now uses a single phonotactic onset/vowel/coda pattern with **1,152 unique outputs**. This removes the 432 duplicate generation paths present in 0.6.0 and avoids the most repetitive constructions such as `Kakaka`, `Kashasha`, or `Taratara`.
+- **Oprak hobgoblin** family names were rebuilt around oath, duty, law, command, cohort, legion, phalanx, bastion, and citadel motifs. The previous generator shared roughly 40% of its smaller family-name space with the universal hobgoblin pack; the revised generator has no exact family-name overlap with it.
+- A German localization collision in the kobold family-name generator was removed by distinguishing `fang` as `fangzahn` from ordinary `tooth` / `zahn`.
+
+### Cultural differentiation
+
+Several of the remaining high-overlap human pools were adjusted, including Brevic, Sarkorian, Nidalese, and Keleshite names. The automated cross-culture quality limit has been tightened from 45% to **30%**, while the current highest overlap between comparable human given-name pools is below 23%.
+
+### Quality and integration testing
+
+The quality suite now verifies that every component generator produces unique rendered outputs in both English and German, not just unique semantic component pairs. It also checks Oprak/universal hobgoblin separation and retains the existing speaking-name, cultural-resolution, and effective-name-count checks.
+
+A real NPC Forge integration suite can now be run with `PF2E_NPC_FORGE_SOURCE` pointing to an NPC Forge 1.1.2+ source checkout. It exercises the actual `ContentRegistry` and `NpcEngine`, confirms that automatic nonhuman naming stays on universal ancestry packs, and verifies explicit regional variants such as Kyonin elves, Varisian tengu, Chelish halflings, Isgeri goblins, Oprak hobgoblins, Brastlewark gnomes, and Katapeshi ysoki.
+
+After the deliberate quality pruning, the library contains **144,942 possible base naming combinations** representing approximately **141,346 distinct base names** before optional epithets.
 
 ## 0.6.0 – Regional & Cultural Expansion II
 
@@ -196,7 +218,7 @@ With all current NPC Forge core ancestries covered and two regional expansion wa
 
 - Foundry VTT 14
 - Pathfinder Second Edition 8.1.2 or newer
-- PF2E NPC Forge 1.1.1 or newer
+- PF2E NPC Forge 1.1.2 or newer
 
 ## License
 
