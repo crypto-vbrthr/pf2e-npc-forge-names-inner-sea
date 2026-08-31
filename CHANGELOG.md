@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.0.0-rc.1 – Release Candidate & Final Library Review
+
+- Froze the planned 1.0 cultural content scope; no new cultures or name packs were added over 0.9.0.
+- Completed a whole-library audit covering all 53 cultures, 85 name packs, all 16 core ancestries, 46 automatic human cultures, and 24 explicit nonhuman culture/ancestry routes.
+- Added release-candidate contract tests for unique IDs, valid ancestry references, culture-to-pack coverage, automatic ancestry subset rules, locale support, positive weights, and exact library-scale metrics.
+- Expanded real NPC Forge integration coverage to every declared culture/ancestry route and added deterministic repeated-seed checks.
+- Confirmed universal nonhuman fallback behavior and all explicit regional routes against the real NPC Forge engine.
+- Confirmed compatibility with NPC Forge 1.1.2 and release-tested the same suite against NPC Forge 1.1.3.
+- Locked the reviewed library metrics at 190,290 theoretical base combinations, 185,482 distinct English base names, 185,536 distinct German rendered base names, and 1,052 matched localization keys before optional epithets.
+- Updated release documentation and metadata for 1.0.0-rc.1.
+
 ## 0.9.0 – Final Cultural Expansion
 
 - Added eight final human cultural traditions: Alkenstari, Jalmerayi, Shackles, Hermean, Lirgeni Tradition, Yamasan Tradition, Mzali, and Varki.

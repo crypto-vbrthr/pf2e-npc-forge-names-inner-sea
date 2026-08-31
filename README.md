@@ -4,6 +4,29 @@
 
 The add-on requires **PF2E NPC Forge 1.1.2 or newer**.
 
+## 1.0.0-rc.1 – Release Candidate & Final Library Review
+
+Version 1.0.0-rc.1 freezes the planned 1.0 content scope and focuses on release readiness rather than adding another cultural wave. The complete library has been reviewed as one system: culture/ancestry routing, fallback behavior, deterministic generation, localization coverage, generator uniqueness, cross-culture separation, and real NPC Forge integration.
+
+### Release-candidate library
+
+- **53 registered naming cultures**
+- **85 name packs**
+- Expanded universal name coverage for all **16 NPC Forge core ancestries**
+- **46 human cultures** eligible for automatic human cultural resolution
+- **24 explicit nonhuman culture/ancestry routes** for regional variants
+- **190,290 theoretical base naming combinations**
+- **185,482 distinct English base names** and **185,536 distinct German rendered base names** before optional epithets
+- **1,052 matched German/English localization keys**
+
+The RC adds no new setting content. Existing culture IDs, name-pack IDs, weights, and generator definitions are intentionally frozen so saved requests and host-module integrations can be tested against the same content intended for 1.0.
+
+### Final integration review
+
+The release suite now performs an exhaustive contract audit over all cultures and packs and exercises every declared culture/ancestry route through the real NPC Forge engine. It also verifies deterministic name selection for repeated seeds, universal nonhuman fallback preservation, explicit regional routing, localization parity, component-output uniqueness, and the existing human cross-culture overlap ceiling.
+
+The add-on remains compatible with **PF2E NPC Forge 1.1.2+** and has also been release-tested against **NPC Forge 1.1.3**.
+
 ## 0.9.0 – Final Cultural Expansion
 
 Version 0.9.0 completes the planned pre-1.0 cultural expansion with a final set of major Inner Sea traditions and several ancestry-specific regional variants. The focus is on conspicuous remaining regions and peoples rather than raw volume.
@@ -343,9 +366,9 @@ If an external module such as Crowd Forge or City Forge supplies a fixed culture
 
 The names in this add-on are original, setting-inspired generator content. The module is not intended to reproduce lists of named characters from published Pathfinder material.
 
-## Planned expansion
+## Release status
 
-With all current NPC Forge core ancestries covered and five regional expansion waves complete, 0.9.0 closes the planned pre-1.0 content expansion. The next release step is a final library, integration, localization, weighting, and release-readiness review rather than another broad content wave.
+The planned 1.0 content scope is frozen in **1.0.0-rc.1**. Further changes before 1.0 Final are limited to confirmed bugs, integration issues, localization corrections, or release-blocking quality problems found during live testing.
 
 ## Requirements
 

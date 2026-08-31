@@ -3,15 +3,15 @@ import assert from "node:assert/strict";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
-import { registerHumanCultures } from "../scripts/content/human-cultures.js";
+import { HUMAN_CULTURES, registerHumanCultures } from "../scripts/content/human-cultures.js";
 import { registerAncestryNamesI } from "../scripts/content/ancestry-names-i.js";
 import { registerAncestryNamesII } from "../scripts/content/ancestry-names-ii.js";
 import { registerAncestryNamesIII } from "../scripts/content/ancestry-names-iii.js";
-import { registerRegionalCultures } from "../scripts/content/regional-cultures.js";
-import { registerRegionalCulturesII } from "../scripts/content/regional-cultures-ii.js";
-import { registerRegionalCulturesIII } from "../scripts/content/regional-cultures-iii.js";
-import { registerRegionalCulturesIV } from "../scripts/content/regional-cultures-iv.js";
-import { registerRegionalCulturesV } from "../scripts/content/regional-cultures-v.js";
+import { REGIONAL_CULTURES, registerRegionalCultures } from "../scripts/content/regional-cultures.js";
+import { REGIONAL_CULTURES_II, registerRegionalCulturesII } from "../scripts/content/regional-cultures-ii.js";
+import { REGIONAL_CULTURES_III, registerRegionalCulturesIII } from "../scripts/content/regional-cultures-iii.js";
+import { REGIONAL_CULTURES_IV, registerRegionalCulturesIV } from "../scripts/content/regional-cultures-iv.js";
+import { REGIONAL_CULTURES_V, registerRegionalCulturesV } from "../scripts/content/regional-cultures-v.js";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const MODULE_ID = "pf2e-npc-forge-names-inner-sea";
@@ -77,6 +77,29 @@ if (!NPC_FORGE_ROOT) {
         assert.ok(!Array.isArray(pack.cultureIds) || pack.cultureIds.length === 0, `${ancestry} selected regional pack ${pack.id}`);
       }
     }
+  });
+
+
+  test("real NPC Forge resolves every declared culture/ancestry route deterministically", () => {
+    const { registry, engine } = setup();
+    const cultures = [...HUMAN_CULTURES, ...REGIONAL_CULTURES, ...REGIONAL_CULTURES_II, ...REGIONAL_CULTURES_III, ...REGIONAL_CULTURES_IV, ...REGIONAL_CULTURES_V];
+    let routes = 0;
+    for (const culture of cultures) {
+      for (const ancestry of culture.ancestryIds) {
+        routes += 1;
+        const request = { seed: `names-100rc-route-${culture.id}-${ancestry}`, ancestry, identity: { nameCulture: culture.id, nameLocale: "en" } };
+        const first = engine.generate(request);
+        const second = engine.generate(request);
+        assert.equal(first.identity.nameCulture?.id, culture.id, `${culture.id} -> ${ancestry}`);
+        assert.equal(first.identity.nameParts.packId, second.identity.nameParts.packId, `${culture.id} -> ${ancestry} pack determinism`);
+        assert.deepEqual(first.identity.nameParts, second.identity.nameParts, `${culture.id} -> ${ancestry} name determinism`);
+        const pack = registry.get("namePacks", first.identity.nameParts.packId);
+        assert.ok(pack, first.identity.nameParts.packId);
+        assert.ok(pack.ancestryIds?.includes(ancestry), `${pack.id} does not support ${ancestry}`);
+        assert.ok(pack.cultureIds?.includes(culture.id), `${pack.id} does not support ${culture.id}`);
+      }
+    }
+    assert.equal(routes, 70);
   });
 
   test("real NPC Forge resolves explicit regional variants through the add-on contracts", () => {
