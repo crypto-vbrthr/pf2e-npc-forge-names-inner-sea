@@ -9,7 +9,7 @@ import { registerRegionalCulturesIV } from "./content/regional-cultures-iv.js";
 import { registerRegionalCulturesV } from "./content/regional-cultures-v.js";
 
 export const MODULE_ID = "pf2e-npc-forge-names-inner-sea";
-export const VERSION = "1.0.0-rc.1";
+export const VERSION = "1.0.0";
 
 let registered = false;
 

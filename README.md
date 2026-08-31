@@ -4,6 +4,12 @@
 
 The add-on requires **PF2E NPC Forge 1.1.2 or newer**.
 
+## 1.0.0 – Final Release
+
+Version 1.0.0 promotes the reviewed release-candidate library to stable status without changing its cultural content, IDs, weights, or generator definitions. The complete 1.0 library contains **53 naming cultures**, **85 name packs**, coverage for all **16 NPC Forge core ancestries**, **190,290 theoretical base naming combinations**, **185,482 distinct English base names**, **185,536 distinct German rendered base names**, and **1,052 matched German/English localization keys** before optional epithets.
+
+The final release retains compatibility with **PF2E NPC Forge 1.1.2 or newer** and has been release-tested against **NPC Forge 1.1.3**. No migration is required from 1.0.0-rc.1.
+
 ## 1.0.0-rc.1 – Release Candidate & Final Library Review
 
 Version 1.0.0-rc.1 freezes the planned 1.0 content scope and focuses on release readiness rather than adding another cultural wave. The complete library has been reviewed as one system: culture/ancestry routing, fallback behavior, deterministic generation, localization coverage, generator uniqueness, cross-culture separation, and real NPC Forge integration.
@@ -368,7 +374,7 @@ The names in this add-on are original, setting-inspired generator content. The m
 
 ## Release status
 
-The planned 1.0 content scope is frozen in **1.0.0-rc.1**. Further changes before 1.0 Final are limited to confirmed bugs, integration issues, localization corrections, or release-blocking quality problems found during live testing.
+**1.0.0 is the stable release** of the reviewed Inner Sea naming library. Future releases can add new regional content or compatibility improvements while keeping existing culture and name-pack IDs stable whenever possible.
 
 ## Requirements
 

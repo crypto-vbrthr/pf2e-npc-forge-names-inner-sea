@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.0 – Final Release
+
+- Promoted the reviewed 1.0.0-rc.1 content set to the stable 1.0.0 release with no content or schema changes.
+- Confirmed the complete library at 53 naming cultures, 85 name packs, 190,290 theoretical base combinations, 185,482 distinct English base names, 185,536 distinct German rendered base names, and 1,052 matched localization keys before optional epithets.
+- Retained compatibility with PF2E NPC Forge 1.1.2+ and confirmed release testing against NPC Forge 1.1.3.
+- Finalized release metadata and documentation for stable distribution.
+
 ## 1.0.0-rc.1 – Release Candidate & Final Library Review
 
 - Froze the planned 1.0 cultural content scope; no new cultures or name packs were added over 0.9.0.
