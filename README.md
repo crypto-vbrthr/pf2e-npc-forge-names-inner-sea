@@ -4,6 +4,26 @@
 
 The add-on requires **PF2E NPC Forge 1.1.0 or newer**.
 
+## 0.4.0 – Ancestry Names III
+
+Version 0.4.0 completes expanded-name coverage for all ancestries currently supported by NPC Forge by adding:
+
+- Tengu
+- Tripkee
+- Ratfolk / Ysoki
+
+These packs follow the naming guidance in Pathfinder Player Core 2 while using original generator content rather than reproducing published example-name lists. They remain culture-neutral universal ancestry packs, so more specific regional variants can still be layered on top later.
+
+The release adds **4,882 additional base given-name combinations**, bringing Names of the Inner Sea to approximately **104,986 base names or full-name combinations** before optional epithets are considered.
+
+### New naming styles
+
+- **Tengu** use a dense, traditional-style compositional given-name generator with repeated hard consonants and compact syllable structures. Tengu names do not require family names. This complements the setting distinction between more traditional tengu names and migrant tengu who may adopt elements from surrounding cultures.
+- **Tripkees** use a fully compositional generator emphasizing resonant vowels and chirping consonant clusters. The generated names intentionally remain less immediately familiar to non-tripkees, while optional localized epithets can serve as easier travel names.
+- **Ysoki** use a deliberately smaller recurring stock of roots with minor suffix variations. This models the ysoki custom of reusing a family collection of names across generations rather than treating every individual as if they had a unique two-part surname system.
+
+Each ancestry also includes a small pool of optional semantically localized epithets.
+
 ## 0.3.0 – Ancestry Names II
 
 Version 0.3.0 adds six further ancestry-focused name packs:
@@ -88,7 +108,7 @@ The names in this add-on are original, setting-inspired generator content. The m
 
 ## Planned expansion
 
-Future releases can add the remaining NPC Forge core ancestries, including tengu, tripkees, and ysoki, as well as additional regional human cultures and more specialized cultural variants for existing ancestry packs.
+With all current NPC Forge core ancestries covered, future releases can focus on additional regional human cultures, migrant-tengu cultural variants, specialized nonhuman regional packs, and further quality and duplication review of the complete name library.
 
 ## Requirements
 

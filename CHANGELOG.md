@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.4.0 – Ancestry Names III
+
+- Added ancestry-focused name packs for tengu, tripkees, and ratfolk / ysoki.
+- Completed expanded-name coverage for all ancestries currently supported by NPC Forge 1.1.0.
+- Added 4,882 new base given-name combinations, bringing the add-on to approximately 104,986 base names or full-name combinations overall.
+- Added a dense compositional traditional-style tengu given-name generator without mandatory family names.
+- Added a resonant-vowel and chirping-consonant compositional tripkee given-name generator.
+- Added a recurring-root plus minor-variant ysoki generator to reflect generational family-name reuse.
+- Added localized ancestry-specific epithets for all three new packs.
+- Kept all three packs culture-neutral so they remain universal ancestry fallbacks.
+- Expanded German and English localization.
+- Added validation for full core-ancestry coverage, generator density, namespace ownership, localization parity, and public API registration.
+
 ## 0.3.0 – Ancestry Names II
 
 - Added ancestry-focused name packs for leshies, catfolk / Amurrun, hobgoblins, lizardfolk / iruxi, kholo, and kobolds.
