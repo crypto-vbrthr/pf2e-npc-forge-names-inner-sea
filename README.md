@@ -4,6 +4,33 @@
 
 The add-on requires **PF2E NPC Forge 1.1.1 or newer**.
 
+## 0.6.0 – Regional & Cultural Expansion II
+
+Version 0.6.0 deepens the Inner Sea layer with six additional human cultural styles and five explicit ancestry-specific regional variants. The emphasis is on recognizable regional texture rather than simply increasing pool size.
+
+### New human cultures
+
+- Isgeri
+- Molthuni
+- Thuvian
+- Katapeshi
+- Nexian
+- Gebbite
+
+These cultures participate in automatic human cultural resolution. Isgeri and Katapeshi also expose nonhuman regional variants, but those remain explicit-only for the nonhuman ancestry.
+
+### New ancestry-specific regional variants
+
+- **Chelish halflings**, using compact proper names and localized household-, road-, and hearth-themed family names
+- **Isgeri goblins**, using short goblin names and localized scrap-, smoke-, road-, and settlement-themed speaking names
+- **Oprak hobgoblins**, using disciplined proper names and compositional duty-, formation-, oath-, and fortification-themed family names
+- **Brastlewark gnomes**, using energetic proper names and localized clockwork-, glass-, lens-, spring-, and gadget-themed family names
+- **Katapeshi ysoki**, using a recurring-root compositional given-name stock influenced by a cosmopolitan trade environment while preserving the ysoki preference for reusable family name pools rather than mandatory surnames
+
+Chelish culture now explicitly supports halflings, while Isgeri and Katapeshi cultures support goblins and ysoki respectively. In all three cases `automaticAncestryIds` remains human-only, so installing the add-on never replaces the universal ancestry pack for those nonhuman ancestries. Oprak and Brastlewark are explicit-only cultures.
+
+The release adds **17,552 base naming combinations**, bringing the complete library to **148,650 possible base naming combinations** and approximately **144,064 distinct base names** before optional epithets are considered.
+
 ## 0.5.1 – Quality & Consistency Fix
 
 Version 0.5.1 is a focused quality pass over the existing library rather than a content expansion. It aligns regional culture behavior with NPC Forge 1.1.1, improves localization consistency, removes awkward compositional collisions, and strengthens cultural differentiation.
@@ -163,7 +190,7 @@ The names in this add-on are original, setting-inspired generator content. The m
 
 ## Planned expansion
 
-With all current NPC Forge core ancestries covered and the first regional layer in place, future releases can deepen additional Inner Sea regions, add further ancestry-specific cultural variants, and perform quality, weighting, and duplication review across the complete library.
+With all current NPC Forge core ancestries covered and two regional expansion waves in place, future releases can deepen selected cultures, add city- or nation-specific variants where they create a genuinely different naming style, and continue quality, weighting, and duplication review across the complete library.
 
 ## Requirements
 

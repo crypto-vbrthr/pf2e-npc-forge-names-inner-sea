@@ -3,9 +3,10 @@ import { registerAncestryNamesI } from "./content/ancestry-names-i.js";
 import { registerAncestryNamesII } from "./content/ancestry-names-ii.js";
 import { registerAncestryNamesIII } from "./content/ancestry-names-iii.js";
 import { registerRegionalCultures } from "./content/regional-cultures.js";
+import { registerRegionalCulturesII } from "./content/regional-cultures-ii.js";
 
 export const MODULE_ID = "pf2e-npc-forge-names-inner-sea";
-export const VERSION = "0.5.1";
+export const VERSION = "0.6.0";
 
 let registered = false;
 
@@ -24,6 +25,7 @@ export function registerContent(api) {
   registerAncestryNamesII(api);
   registerAncestryNamesIII(api);
   registerRegionalCultures(api);
+  registerRegionalCulturesII(api);
   registered = true;
   console.log(`${MODULE_ID} | Registered Names of the Inner Sea ${VERSION}`);
   return true;

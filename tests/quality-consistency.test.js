@@ -8,11 +8,12 @@ import { ANCESTRY_NAME_PACKS_I } from "../scripts/content/ancestry-names-i.js";
 import { ANCESTRY_NAME_PACKS_II } from "../scripts/content/ancestry-names-ii.js";
 import { ANCESTRY_NAME_PACKS_III } from "../scripts/content/ancestry-names-iii.js";
 import { REGIONAL_CULTURES, REGIONAL_NAME_PACKS } from "../scripts/content/regional-cultures.js";
+import { REGIONAL_CULTURES_II, REGIONAL_NAME_PACKS_II } from "../scripts/content/regional-cultures-ii.js";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const MODULE_ID = "pf2e-npc-forge-names-inner-sea";
-const ALL_PACKS = [...HUMAN_NAME_PACKS, ...ANCESTRY_NAME_PACKS_I, ...ANCESTRY_NAME_PACKS_II, ...ANCESTRY_NAME_PACKS_III, ...REGIONAL_NAME_PACKS];
-const HUMAN_PACKS = [...HUMAN_NAME_PACKS, ...REGIONAL_NAME_PACKS.filter((pack) => pack.ancestryIds?.includes("core.human"))];
+const ALL_PACKS = [...HUMAN_NAME_PACKS, ...ANCESTRY_NAME_PACKS_I, ...ANCESTRY_NAME_PACKS_II, ...ANCESTRY_NAME_PACKS_III, ...REGIONAL_NAME_PACKS, ...REGIONAL_NAME_PACKS_II];
+const HUMAN_PACKS = [...HUMAN_NAME_PACKS, ...REGIONAL_NAME_PACKS.filter((pack) => pack.ancestryIds?.includes("core.human")), ...REGIONAL_NAME_PACKS_II.filter((pack) => pack.ancestryIds?.includes("core.human"))];
 const en = JSON.parse(fs.readFileSync(path.join(ROOT, "lang/en.json"), "utf8"));
 const de = JSON.parse(fs.readFileSync(path.join(ROOT, "lang/de.json"), "utf8"));
 
@@ -133,7 +134,7 @@ test("human cultural given-name pools stay meaningfully differentiated", () => {
   }
 });
 
-test("the library still exposes over 130,000 combinations and over 125,000 distinct base names", () => {
+test("the expanded library exposes over 140,000 combinations and over 135,000 distinct base names", () => {
   let theoretical = 0;
   const unique = new Set();
   for (const pack of ALL_PACKS) {
@@ -146,6 +147,6 @@ test("the library still exposes over 130,000 combinations and over 125,000 disti
       for (const first of given) unique.add(first);
     }
   }
-  assert.ok(theoretical >= 130000, `only ${theoretical} possible combinations`);
-  assert.ok(unique.size >= 125000, `only ${unique.size} distinct base names`);
+  assert.ok(theoretical >= 140000, `only ${theoretical} possible combinations`);
+  assert.ok(unique.size >= 135000, `only ${unique.size} distinct base names`);
 });

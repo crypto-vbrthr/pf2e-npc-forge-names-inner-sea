@@ -11,7 +11,7 @@ const semantic = (key, fallback) => ({
 
 export const HUMAN_CULTURES = Object.freeze([
   { id: `${MODULE_ID}.taldan`, labelKey: "NAMESINNERSEA.Culture.Taldan", ancestryIds: HUMAN_TENGU, automaticAncestryIds: HUMAN, supportedLocales: LOCALES, weight: 10 },
-  { id: `${MODULE_ID}.chelish`, labelKey: "NAMESINNERSEA.Culture.Chelish", ancestryIds: HUMAN_TENGU, automaticAncestryIds: HUMAN, supportedLocales: LOCALES, weight: 10 },
+  { id: `${MODULE_ID}.chelish`, labelKey: "NAMESINNERSEA.Culture.Chelish", ancestryIds: ["core.human", "core.tengu", "core.halfling"], automaticAncestryIds: HUMAN, supportedLocales: LOCALES, weight: 10 },
   { id: `${MODULE_ID}.varisian`, labelKey: "NAMESINNERSEA.Culture.Varisian", ancestryIds: HUMAN_TENGU, automaticAncestryIds: HUMAN, supportedLocales: LOCALES, weight: 10 },
   { id: `${MODULE_ID}.ulfen`, labelKey: "NAMESINNERSEA.Culture.Ulfen", ancestryIds: HUMAN, automaticAncestryIds: HUMAN, supportedLocales: LOCALES, weight: 8 },
   { id: `${MODULE_ID}.osiriani`, labelKey: "NAMESINNERSEA.Culture.Osiriani", ancestryIds: HUMAN, automaticAncestryIds: HUMAN, supportedLocales: LOCALES, weight: 9 },

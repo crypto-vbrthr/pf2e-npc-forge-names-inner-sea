@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.6.0 – Regional & Cultural Expansion II
+
+- Added six further human cultural name packs: Isgeri, Molthuni, Thuvian, Katapeshi, Nexian, and Gebbite.
+- Added explicit ancestry-specific regional packs for Chelish halflings, Isgeri goblins, Oprak hobgoblins, Brastlewark gnomes, and Katapeshi ysoki.
+- Extended Chelish culture to support halflings while keeping automatic cultural resolution human-only.
+- Added mixed human/nonhuman Isgeri and Katapeshi cultures with nonhuman variants remaining explicit-only through `automaticAncestryIds`.
+- Added explicit-only Oprak and Brastlewark cultures.
+- Added semantically localized speaking family names and epithets for all descriptive regional content.
+- Added a compositional Oprak hobgoblin family-name generator and a recurring-root Katapeshi ysoki given-name generator.
+- Added 17,552 base naming combinations, bringing the library to 148,650 possible base combinations and approximately 144,064 distinct base names before optional epithets.
+- Added tests for mixed-ancestry culture behavior, explicit-only regional resolution, content density, namespace ownership, localization parity, and public API registration.
+
 ## 0.5.1 – Quality & Consistency Fix
 
 - Updated the add-on requirement to PF2E NPC Forge 1.1.1.
