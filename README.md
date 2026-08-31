@@ -2,7 +2,26 @@
 
 **Names of the Inner Sea** is a cultural name expansion for **PF2E NPC Forge**. It adds large, setting-inspired name pools for characters from the Inner Sea region while leaving all generation logic in NPC Forge itself.
 
-The add-on requires **PF2E NPC Forge 1.1.0 or newer**.
+The add-on requires **PF2E NPC Forge 1.1.1 or newer**.
+
+## 0.5.1 – Quality & Consistency Fix
+
+Version 0.5.1 is a focused quality pass over the existing library rather than a content expansion. It aligns regional culture behavior with NPC Forge 1.1.1, improves localization consistency, removes awkward compositional collisions, and strengthens cultural differentiation.
+
+### Cultural resolution
+
+Human cultures remain eligible for automatic generation. Regional ancestry variants such as **Kyonin elves**, **Five Kings dwarves**, and **Belkzen orcs** are now explicitly selectable but no longer replace universal ancestry naming by merely being installed. Likewise, Varisian, Taldan, and Chelish migrant-tengu packs remain available for explicit selection or host-module requests, while automatically generated tengu continue to use their universal tengu naming pool unless a culture is supplied.
+
+This behavior requires NPC Forge 1.1.1 and its `automaticAncestryIds` provider contract.
+
+### Naming quality
+
+- Descriptive regional family names in the Shoanti, Kellid, Sarkorian, Nidalese, and Kyonin pools now use semantic entries so speaking names can render appropriately in German and English.
+- Component combinations that could produce doubled words such as `Forgeforge`, `Hammerhammer`, `Scalescale`, `Sparkspark`, or `Scarscar` have been removed while keeping the overall pool size intact.
+- Rahadoumi, Brevic, Ustalavic, and Nidalese given-name pools were adjusted to reduce excessive cross-culture overlap, especially in neutral-name pools.
+- The full library still exposes **131,098 possible base naming combinations**, representing approximately **127,393 distinct base names** before optional epithets are considered.
+
+New quality tests now check automatic-culture intent, compound-word collisions, semantic speaking-name localization, cross-culture duplicate density, and the effective distinct-name count.
 
 ## 0.5.0 – Regional & Cultural Expansion I
 
@@ -25,7 +44,7 @@ It also introduces the first ancestry-specific regional cultures:
 
 and three migrant-tengu variants influenced by Varisian, Taldan, and Chelish naming environments. These tengu packs retain tengu phonetic structure while borrowing regional cadence and localized epithets rather than simply assigning human names to tengu.
 
-The release contributes **26,112 additional base regional naming combinations**, bringing the library to approximately **131,098 base names or full-name combinations** before optional epithets are considered.
+The release contributes **26,112 additional base regional naming combinations**, bringing the library to **131,098 possible base naming combinations** before optional epithets are considered.
 
 ### Regional selection
 
@@ -82,7 +101,7 @@ The second ancestry block makes heavier use of NPC Forge's compositional naming 
 - **Leshies** use fully compositional, semantically localized given names built from natural elements, producing names such as `Mossbud` / `Moosknospe` or `Sunbloom` / `Sonnenblüte`. They do not require a family name.
 - **Catfolk / Amurrun** use flowing proper given names and localized descriptive family names such as `Moonwhisker` / `Mondschnurrhaar`.
 - **Hobgoblins** use disciplined, martial proper names and formation- or duty-themed family names such as `Ironwatch` / `Eisenwache`.
-- **Iruxi** use sibilant proper names and environment- or scale-themed family names such as `Reedscale` / `Schilfschuppe`.
+- **Iruxi** use sibilant proper names and environment- or scale-themed family names such as `Reedtail` / `Schilfschweif`.
 - **Kholo** use strong proper names and pack-, trail-, and hunting-themed family names such as `Dusttrack` / `Staubspur`.
 - **Kobolds** use compact draconic-sounding proper names and treasure-, tunnel-, and dragon-themed family names such as `Emberhoard` / `Gluthort`.
 
@@ -125,7 +144,7 @@ api.content.registerNameCulture(...);
 api.content.registerNamePack(...);
 ```
 
-Human cultures appear automatically in NPC Forge's **Name Culture** selector. Ancestry-focused packs participate in deterministic automatic resolution for their matching ancestry and remain available through the normal name-pack selection.
+Human cultures participate in NPC Forge's automatic cultural resolution. Regional nonhuman cultures remain explicitly selectable, while universal ancestry packs stay the automatic default unless a culture is supplied by the user or a host module. All matching cultures and packs remain available through the normal selectors.
 
 If an external module such as Crowd Forge or City Forge supplies a fixed culture or pack ID, NPC Forge can use the corresponding content directly.
 
@@ -150,7 +169,7 @@ With all current NPC Forge core ancestries covered and the first regional layer 
 
 - Foundry VTT 14
 - Pathfinder Second Edition 8.1.2 or newer
-- PF2E NPC Forge 1.1.0 or newer
+- PF2E NPC Forge 1.1.1 or newer
 
 ## License
 

@@ -10,14 +10,14 @@ const semantic = (key, fallback) => ({
 });
 
 export const HUMAN_CULTURES = Object.freeze([
-  { id: `${MODULE_ID}.taldan`, labelKey: "NAMESINNERSEA.Culture.Taldan", ancestryIds: HUMAN_TENGU, supportedLocales: LOCALES, weight: 10 },
-  { id: `${MODULE_ID}.chelish`, labelKey: "NAMESINNERSEA.Culture.Chelish", ancestryIds: HUMAN_TENGU, supportedLocales: LOCALES, weight: 10 },
-  { id: `${MODULE_ID}.varisian`, labelKey: "NAMESINNERSEA.Culture.Varisian", ancestryIds: HUMAN_TENGU, supportedLocales: LOCALES, weight: 10 },
-  { id: `${MODULE_ID}.ulfen`, labelKey: "NAMESINNERSEA.Culture.Ulfen", ancestryIds: HUMAN, supportedLocales: LOCALES, weight: 8 },
-  { id: `${MODULE_ID}.osiriani`, labelKey: "NAMESINNERSEA.Culture.Osiriani", ancestryIds: HUMAN, supportedLocales: LOCALES, weight: 9 },
-  { id: `${MODULE_ID}.keleshite`, labelKey: "NAMESINNERSEA.Culture.Keleshite", ancestryIds: HUMAN, supportedLocales: LOCALES, weight: 9 },
-  { id: `${MODULE_ID}.ustalavic`, labelKey: "NAMESINNERSEA.Culture.Ustalavic", ancestryIds: HUMAN, supportedLocales: LOCALES, weight: 8 },
-  { id: `${MODULE_ID}.andoren`, labelKey: "NAMESINNERSEA.Culture.Andoren", ancestryIds: HUMAN, supportedLocales: LOCALES, weight: 10 }
+  { id: `${MODULE_ID}.taldan`, labelKey: "NAMESINNERSEA.Culture.Taldan", ancestryIds: HUMAN_TENGU, automaticAncestryIds: HUMAN, supportedLocales: LOCALES, weight: 10 },
+  { id: `${MODULE_ID}.chelish`, labelKey: "NAMESINNERSEA.Culture.Chelish", ancestryIds: HUMAN_TENGU, automaticAncestryIds: HUMAN, supportedLocales: LOCALES, weight: 10 },
+  { id: `${MODULE_ID}.varisian`, labelKey: "NAMESINNERSEA.Culture.Varisian", ancestryIds: HUMAN_TENGU, automaticAncestryIds: HUMAN, supportedLocales: LOCALES, weight: 10 },
+  { id: `${MODULE_ID}.ulfen`, labelKey: "NAMESINNERSEA.Culture.Ulfen", ancestryIds: HUMAN, automaticAncestryIds: HUMAN, supportedLocales: LOCALES, weight: 8 },
+  { id: `${MODULE_ID}.osiriani`, labelKey: "NAMESINNERSEA.Culture.Osiriani", ancestryIds: HUMAN, automaticAncestryIds: HUMAN, supportedLocales: LOCALES, weight: 9 },
+  { id: `${MODULE_ID}.keleshite`, labelKey: "NAMESINNERSEA.Culture.Keleshite", ancestryIds: HUMAN, automaticAncestryIds: HUMAN, supportedLocales: LOCALES, weight: 9 },
+  { id: `${MODULE_ID}.ustalavic`, labelKey: "NAMESINNERSEA.Culture.Ustalavic", ancestryIds: HUMAN, automaticAncestryIds: HUMAN, supportedLocales: LOCALES, weight: 8 },
+  { id: `${MODULE_ID}.andoren`, labelKey: "NAMESINNERSEA.Culture.Andoren", ancestryIds: HUMAN, automaticAncestryIds: HUMAN, supportedLocales: LOCALES, weight: 10 }
 ]);
 
 const commonEpithets = [
@@ -152,7 +152,7 @@ export const HUMAN_NAME_PACKS = Object.freeze([
     given: {
       male: ["Adrian", "Bogdan", "Constantin", "Dorian", "Emil", "Florin", "Gavril", "Ion", "Lucian", "Mihail", "Nicolae", "Ovidiu", "Petru", "Radu", "Sorin", "Stefan", "Toma", "Valentin", "Vasile", "Viktor", "Yaros", "Zarek", "Zorin", "Dragomir"],
       female: ["Adela", "Alina", "Catrina", "Daciana", "Elena", "Florina", "Ilinca", "Irina", "Livia", "Marica", "Nadia", "Oana", "Petra", "Raluca", "Sabina", "Sorina", "Stefana", "Tatiana", "Valeria", "Viorica", "Yelena", "Zaria", "Zorina", "Dragana"],
-      neutral: ["Alex", "Dani", "Ilya", "Kris", "Mika", "Niki", "Sasha", "Toma", "Vali", "Vanya", "Vika", "Zori"]
+      neutral: ["Alex", "Deni", "Ilya", "Kris", "Miko", "Niki", "Sasa", "Tomi", "Vali", "Vanya", "Vika", "Zori"]
     },
     family: ["Ardelean", "Barcov", "Cernat", "Dragovic", "Florescu", "Gavrilen", "Iliescu", "Korvan", "Lupescu", "Marcov", "Nicolescu", "Orlovan", "Petrescu", "Radovan", "Sorinov", "Stavrescu", "Tomares", "Varlan", "Vasilev", "Voicu", "Zamfir", "Zorilescu", "Balan", "Cozarin", "Dobrev", "Ionescu", "Muresan", "Preda", "Stancu", "Vladarin"],
     epithets: [...commonEpithets, semantic("Epithet.Grave", "the Grave"), semantic("Epithet.Nightwalker", "the Night-Walker")],

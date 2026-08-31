@@ -25,7 +25,7 @@ function baseCombinationCount(pack) {
 }
 
 function semanticEntries(pack) {
-  const entries = [...(pack.epithets ?? [])];
+  const entries = [...(pack.epithets ?? []), ...(pack.family ?? []).filter((entry) => entry && typeof entry === "object")];
   for (const generator of Object.values(pack.generators ?? {})) {
     for (const values of Object.values(generator.components ?? {})) entries.push(...values);
   }

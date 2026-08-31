@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.5.1 – Quality & Consistency Fix
+
+- Updated the add-on requirement to PF2E NPC Forge 1.1.1.
+- Added `automaticAncestryIds` to all culture definitions.
+- Kept human cultures eligible for automatic generation while making Kyonin, Five Kings, and Belkzen ancestry cultures explicit-only.
+- Kept Varisian, Taldan, and Chelish migrant-tengu variants explicitly selectable without replacing the universal tengu pack during automatic generation.
+- Converted descriptive Shoanti, Kellid, Sarkorian, Nidalese, and Kyonin family names to semantic localized entries.
+- Removed compositional collisions that could generate doubled names such as `Forgeforge`, `Hammerhammer`, `Scalescale`, `Sparkspark`, and `Scarscar`.
+- Reduced excessive overlap between Rahadoumi and Osiriani pools and between Brevic, Varisian, Ustalavic, and Nidalese neutral-name pools.
+- Retained 131,098 possible base naming combinations, with approximately 127,393 distinct base names before optional epithets.
+- Added quality tests for automatic-culture intent, compound collisions, speaking-name localization, cross-culture duplicate density, and distinct-name counts.
+
 ## 0.5.0 – Regional & Cultural Expansion I
 
 - Added eight further human cultural name packs: Shoanti, Kellid, Mwangi, Vudrani, Sarkorian, Brevic, Rahadoumi, and Nidalese.

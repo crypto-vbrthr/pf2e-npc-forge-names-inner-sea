@@ -74,7 +74,7 @@ export const ANCESTRY_NAME_PACKS_II = Object.freeze([
         [
           semantic("Leshy.Given.Suffix.Berry", "berry"), semantic("Leshy.Given.Suffix.Bloom", "bloom"), semantic("Leshy.Given.Suffix.Bud", "bud"), semantic("Leshy.Given.Suffix.Cap", "cap"),
           semantic("Leshy.Given.Suffix.Frond", "frond"), semantic("Leshy.Given.Suffix.Leaf", "leaf"), semantic("Leshy.Given.Suffix.Root", "root"), semantic("Leshy.Given.Suffix.Sprig", "sprig"),
-          semantic("Leshy.Given.Suffix.Spore", "spore"), semantic("Leshy.Given.Suffix.Stem", "stem"), semantic("Leshy.Given.Suffix.Twig", "twig"), semantic("Leshy.Given.Suffix.Vine", "vine")
+          semantic("Leshy.Given.Suffix.Spore", "spore"), semantic("Leshy.Given.Suffix.Stem", "stem"), semantic("Leshy.Given.Suffix.Twig", "twig"), semantic("Leshy.Given.Suffix.Creeper", "creeper")
         ]
       )
     },
@@ -128,9 +128,9 @@ export const ANCESTRY_NAME_PACKS_II = Object.freeze([
           semantic("Hobgoblin.Family.Prefix.Steel", "Steel"), semantic("Hobgoblin.Family.Prefix.Stone", "Stone"), semantic("Hobgoblin.Family.Prefix.War", "War"), semantic("Hobgoblin.Family.Prefix.Banner", "Banner")
         ],
         [
-          semantic("Hobgoblin.Family.Suffix.Banner", "banner"), semantic("Hobgoblin.Family.Suffix.Crest", "crest"), semantic("Hobgoblin.Family.Suffix.Fist", "fist"), semantic("Hobgoblin.Family.Suffix.Guard", "guard"),
+          semantic("Hobgoblin.Family.Suffix.Standard", "standard"), semantic("Hobgoblin.Family.Suffix.Crest", "crest"), semantic("Hobgoblin.Family.Suffix.Fist", "fist"), semantic("Hobgoblin.Family.Suffix.Guard", "guard"),
           semantic("Hobgoblin.Family.Suffix.Line", "line"), semantic("Hobgoblin.Family.Suffix.March", "march"), semantic("Hobgoblin.Family.Suffix.Oath", "oath"), semantic("Hobgoblin.Family.Suffix.Rank", "rank"),
-          semantic("Hobgoblin.Family.Suffix.Shield", "shield"), semantic("Hobgoblin.Family.Suffix.Spear", "spear"), semantic("Hobgoblin.Family.Suffix.Ward", "ward"), semantic("Hobgoblin.Family.Suffix.Watch", "watch")
+          semantic("Hobgoblin.Family.Suffix.Wall", "wall"), semantic("Hobgoblin.Family.Suffix.Pike", "pike"), semantic("Hobgoblin.Family.Suffix.Ward", "ward"), semantic("Hobgoblin.Family.Suffix.Watch", "watch")
         ]
       )
     },
@@ -157,8 +157,8 @@ export const ANCESTRY_NAME_PACKS_II = Object.freeze([
         ],
         [
           semantic("Iruxi.Family.Suffix.Claw", "claw"), semantic("Iruxi.Family.Suffix.Crest", "crest"), semantic("Iruxi.Family.Suffix.Current", "current"), semantic("Iruxi.Family.Suffix.Eye", "eye"),
-          semantic("Iruxi.Family.Suffix.Fang", "fang"), semantic("Iruxi.Family.Suffix.Foot", "foot"), semantic("Iruxi.Family.Suffix.Hide", "hide"), semantic("Iruxi.Family.Suffix.Reed", "reed"),
-          semantic("Iruxi.Family.Suffix.Scale", "scale"), semantic("Iruxi.Family.Suffix.Tail", "tail"), semantic("Iruxi.Family.Suffix.Tooth", "tooth"), semantic("Iruxi.Family.Suffix.Watcher", "watcher")
+          semantic("Iruxi.Family.Suffix.Fang", "fang"), semantic("Iruxi.Family.Suffix.Foot", "foot"), semantic("Iruxi.Family.Suffix.Hide", "hide"), semantic("Iruxi.Family.Suffix.Rush", "rush"),
+          semantic("Iruxi.Family.Suffix.Plate", "plate"), semantic("Iruxi.Family.Suffix.Tail", "tail"), semantic("Iruxi.Family.Suffix.Tooth", "tooth"), semantic("Iruxi.Family.Suffix.Watcher", "watcher")
         ]
       )
     },
@@ -213,7 +213,7 @@ export const ANCESTRY_NAME_PACKS_II = Object.freeze([
         ],
         [
           semantic("Kobold.Family.Suffix.Claw", "claw"), semantic("Kobold.Family.Suffix.Coil", "coil"), semantic("Kobold.Family.Suffix.Fang", "fang"), semantic("Kobold.Family.Suffix.Gem", "gem"),
-          semantic("Kobold.Family.Suffix.Hoard", "hoard"), semantic("Kobold.Family.Suffix.Scale", "scale"), semantic("Kobold.Family.Suffix.Snout", "snout"), semantic("Kobold.Family.Suffix.Spark", "spark"),
+          semantic("Kobold.Family.Suffix.Hoard", "hoard"), semantic("Kobold.Family.Suffix.Crest", "crest"), semantic("Kobold.Family.Suffix.Snout", "snout"), semantic("Kobold.Family.Suffix.Flash", "flash"),
           semantic("Kobold.Family.Suffix.Tail", "tail"), semantic("Kobold.Family.Suffix.Tooth", "tooth"), semantic("Kobold.Family.Suffix.Tunnel", "tunnel"), semantic("Kobold.Family.Suffix.Wing", "wing")
         ]
       )
