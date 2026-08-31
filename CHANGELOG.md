@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.9.0 – Final Cultural Expansion
+
+- Added eight final human cultural traditions: Alkenstari, Jalmerayi, Shackles, Hermean, Lirgeni Tradition, Yamasan Tradition, Mzali, and Varki.
+- Added explicit regional ancestry packs for Shackles tengu, Osiriani kholo, Nexian kholo, and Ustalavic ysoki.
+- Extended Osiriani and Nexian cultures to kholo and Ustalavic culture to ysoki while keeping automatic resolution human-only.
+- Made Shackles culture available to tengu while preserving human-only automatic resolution.
+- Modeled Lirgen and Yamasa as surviving naming traditions rather than present-day nations.
+- Added a mononym-style Varki component generator and seafaring Shackles tengu phonotactics without mandatory family names.
+- Added semantically localized Osiriani and Nexian kholo family names plus localized epithets for all new content.
+- Added 11,800 base naming combinations, bringing the full library to 190,290 theoretical base combinations and 185,482 distinct base names before optional epithets.
+- Expanded the real NPC Forge 1.1.2 integration suite with all four new explicit regional variants.
+- Added 0.9.0 namespace, culture-reference, density, localization, provider-contract, and ancestry-resolution regression tests.
+
 ## 0.8.1 – Regional Localization & Phonetics Pass
 
 - Rebuilt the Qadiran tengu phonotactic generator around longer codas, retaining 560 unique generated given names while removing accidental lexical outputs.

@@ -20,7 +20,7 @@ export const REGIONAL_CULTURES_II = Object.freeze([
   { id: `${MODULE_ID}.molthuni`, labelKey: "NAMESINNERSEA.Culture.Molthuni", ancestryIds: H, automaticAncestryIds: H, supportedLocales: LOCALES, weight: 7 },
   { id: `${MODULE_ID}.thuvian`, labelKey: "NAMESINNERSEA.Culture.Thuvian", ancestryIds: H, automaticAncestryIds: H, supportedLocales: LOCALES, weight: 7 },
   { id: `${MODULE_ID}.katapeshi`, labelKey: "NAMESINNERSEA.Culture.Katapeshi", ancestryIds: ["core.human", "core.ratfolk", "core.kholo"], automaticAncestryIds: H, supportedLocales: LOCALES, weight: 8 },
-  { id: `${MODULE_ID}.nexian`, labelKey: "NAMESINNERSEA.Culture.Nexian", ancestryIds: H, automaticAncestryIds: H, supportedLocales: LOCALES, weight: 7 },
+  { id: `${MODULE_ID}.nexian`, labelKey: "NAMESINNERSEA.Culture.Nexian", ancestryIds: ["core.human", "core.kholo"], automaticAncestryIds: H, supportedLocales: LOCALES, weight: 7 },
   { id: `${MODULE_ID}.gebbite`, labelKey: "NAMESINNERSEA.Culture.Gebbite", ancestryIds: H, automaticAncestryIds: H, supportedLocales: LOCALES, weight: 6 },
   { id: `${MODULE_ID}.oprak`, labelKey: "NAMESINNERSEA.Culture.Oprak", ancestryIds: ["core.hobgoblin"], automaticAncestryIds: [], supportedLocales: LOCALES, weight: 12 },
   { id: `${MODULE_ID}.brastlewark`, labelKey: "NAMESINNERSEA.Culture.Brastlewark", ancestryIds: ["core.gnome"], automaticAncestryIds: [], supportedLocales: LOCALES, weight: 12 }

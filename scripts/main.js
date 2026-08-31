@@ -6,9 +6,10 @@ import { registerRegionalCultures } from "./content/regional-cultures.js";
 import { registerRegionalCulturesII } from "./content/regional-cultures-ii.js";
 import { registerRegionalCulturesIII } from "./content/regional-cultures-iii.js";
 import { registerRegionalCulturesIV } from "./content/regional-cultures-iv.js";
+import { registerRegionalCulturesV } from "./content/regional-cultures-v.js";
 
 export const MODULE_ID = "pf2e-npc-forge-names-inner-sea";
-export const VERSION = "0.8.1";
+export const VERSION = "0.9.0";
 
 let registered = false;
 
@@ -34,6 +35,7 @@ export function registerContent(api) {
   registerRegionalCulturesII(api);
   registerRegionalCulturesIII(api);
   registerRegionalCulturesIV(api);
+  registerRegionalCulturesV(api);
   registered = true;
   console.log(`${MODULE_ID} | Registered Names of the Inner Sea ${VERSION}`);
   return true;

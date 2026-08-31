@@ -11,11 +11,12 @@ import { REGIONAL_CULTURES, REGIONAL_NAME_PACKS } from "../scripts/content/regio
 import { REGIONAL_CULTURES_II, REGIONAL_NAME_PACKS_II } from "../scripts/content/regional-cultures-ii.js";
 import { REGIONAL_CULTURES_III, REGIONAL_NAME_PACKS_III } from "../scripts/content/regional-cultures-iii.js";
 import { REGIONAL_CULTURES_IV, REGIONAL_NAME_PACKS_IV } from "../scripts/content/regional-cultures-iv.js";
+import { REGIONAL_CULTURES_V, REGIONAL_NAME_PACKS_V } from "../scripts/content/regional-cultures-v.js";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const MODULE_ID = "pf2e-npc-forge-names-inner-sea";
-const ALL_PACKS = [...HUMAN_NAME_PACKS, ...ANCESTRY_NAME_PACKS_I, ...ANCESTRY_NAME_PACKS_II, ...ANCESTRY_NAME_PACKS_III, ...REGIONAL_NAME_PACKS, ...REGIONAL_NAME_PACKS_II, ...REGIONAL_NAME_PACKS_III, ...REGIONAL_NAME_PACKS_IV];
-const HUMAN_PACKS = [...HUMAN_NAME_PACKS, ...REGIONAL_NAME_PACKS.filter((pack) => pack.ancestryIds?.includes("core.human")), ...REGIONAL_NAME_PACKS_II.filter((pack) => pack.ancestryIds?.includes("core.human")), ...REGIONAL_NAME_PACKS_III.filter((pack) => pack.ancestryIds?.includes("core.human")), ...REGIONAL_NAME_PACKS_IV.filter((pack) => pack.ancestryIds?.includes("core.human"))];
+const ALL_PACKS = [...HUMAN_NAME_PACKS, ...ANCESTRY_NAME_PACKS_I, ...ANCESTRY_NAME_PACKS_II, ...ANCESTRY_NAME_PACKS_III, ...REGIONAL_NAME_PACKS, ...REGIONAL_NAME_PACKS_II, ...REGIONAL_NAME_PACKS_III, ...REGIONAL_NAME_PACKS_IV, ...REGIONAL_NAME_PACKS_V];
+const HUMAN_PACKS = [...HUMAN_NAME_PACKS, ...REGIONAL_NAME_PACKS.filter((pack) => pack.ancestryIds?.includes("core.human")), ...REGIONAL_NAME_PACKS_II.filter((pack) => pack.ancestryIds?.includes("core.human")), ...REGIONAL_NAME_PACKS_III.filter((pack) => pack.ancestryIds?.includes("core.human")), ...REGIONAL_NAME_PACKS_IV.filter((pack) => pack.ancestryIds?.includes("core.human")), ...REGIONAL_NAME_PACKS_V.filter((pack) => pack.ancestryIds?.includes("core.human"))];
 const en = JSON.parse(fs.readFileSync(path.join(ROOT, "lang/en.json"), "utf8"));
 const de = JSON.parse(fs.readFileSync(path.join(ROOT, "lang/de.json"), "utf8"));
 
@@ -241,7 +242,7 @@ test("0.8.1 regional display names use the reviewed German and English terminolo
   assert.equal(de["NAMESINNERSEA.Pack.NewThassilonianHuman"], "Neu-Thassilonische Menschennamen");
 });
 
-test("the expanded library exposes over 175,000 combinations and over 170,000 distinct base names", () => {
+test("the expanded library exposes over 185,000 combinations and over 180,000 distinct base names", () => {
   let theoretical = 0;
   const unique = new Set();
   for (const pack of ALL_PACKS) {
@@ -254,6 +255,6 @@ test("the expanded library exposes over 175,000 combinations and over 170,000 di
       for (const first of given) unique.add(first);
     }
   }
-  assert.ok(theoretical >= 175000, `only ${theoretical} possible combinations`);
-  assert.ok(unique.size >= 170000, `only ${unique.size} distinct base names`);
+  assert.ok(theoretical >= 185000, `only ${theoretical} possible combinations`);
+  assert.ok(unique.size >= 180000, `only ${unique.size} distinct base names`);
 });

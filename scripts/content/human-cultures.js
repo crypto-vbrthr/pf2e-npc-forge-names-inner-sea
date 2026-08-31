@@ -14,9 +14,9 @@ export const HUMAN_CULTURES = Object.freeze([
   { id: `${MODULE_ID}.chelish`, labelKey: "NAMESINNERSEA.Culture.Chelish", ancestryIds: ["core.human", "core.tengu", "core.halfling"], automaticAncestryIds: HUMAN, supportedLocales: LOCALES, weight: 10 },
   { id: `${MODULE_ID}.varisian`, labelKey: "NAMESINNERSEA.Culture.Varisian", ancestryIds: HUMAN_TENGU, automaticAncestryIds: HUMAN, supportedLocales: LOCALES, weight: 10 },
   { id: `${MODULE_ID}.ulfen`, labelKey: "NAMESINNERSEA.Culture.Ulfen", ancestryIds: HUMAN, automaticAncestryIds: HUMAN, supportedLocales: LOCALES, weight: 8 },
-  { id: `${MODULE_ID}.osiriani`, labelKey: "NAMESINNERSEA.Culture.Osiriani", ancestryIds: HUMAN, automaticAncestryIds: HUMAN, supportedLocales: LOCALES, weight: 9 },
+  { id: `${MODULE_ID}.osiriani`, labelKey: "NAMESINNERSEA.Culture.Osiriani", ancestryIds: ["core.human", "core.kholo"], automaticAncestryIds: HUMAN, supportedLocales: LOCALES, weight: 9 },
   { id: `${MODULE_ID}.keleshite`, labelKey: "NAMESINNERSEA.Culture.Keleshite", ancestryIds: HUMAN, automaticAncestryIds: HUMAN, supportedLocales: LOCALES, weight: 9 },
-  { id: `${MODULE_ID}.ustalavic`, labelKey: "NAMESINNERSEA.Culture.Ustalavic", ancestryIds: HUMAN, automaticAncestryIds: HUMAN, supportedLocales: LOCALES, weight: 8 },
+  { id: `${MODULE_ID}.ustalavic`, labelKey: "NAMESINNERSEA.Culture.Ustalavic", ancestryIds: ["core.human", "core.ratfolk"], automaticAncestryIds: HUMAN, supportedLocales: LOCALES, weight: 8 },
   { id: `${MODULE_ID}.andoren`, labelKey: "NAMESINNERSEA.Culture.Andoren", ancestryIds: HUMAN, automaticAncestryIds: HUMAN, supportedLocales: LOCALES, weight: 10 }
 ]);
 

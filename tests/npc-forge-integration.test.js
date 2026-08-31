@@ -11,6 +11,7 @@ import { registerRegionalCultures } from "../scripts/content/regional-cultures.j
 import { registerRegionalCulturesII } from "../scripts/content/regional-cultures-ii.js";
 import { registerRegionalCulturesIII } from "../scripts/content/regional-cultures-iii.js";
 import { registerRegionalCulturesIV } from "../scripts/content/regional-cultures-iv.js";
+import { registerRegionalCulturesV } from "../scripts/content/regional-cultures-v.js";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const MODULE_ID = "pf2e-npc-forge-names-inner-sea";
@@ -53,6 +54,7 @@ if (!NPC_FORGE_ROOT) {
     registerRegionalCulturesII(api);
     registerRegionalCulturesIII(api);
     registerRegionalCulturesIV(api);
+    registerRegionalCulturesV(api);
     return { registry, engine: new NpcEngine({ registry }) };
   }
 
@@ -68,7 +70,7 @@ if (!NPC_FORGE_ROOT) {
     const ancestries = ["core.elf", "core.dwarf", "core.orc", "core.tengu", "core.halfling", "core.goblin", "core.hobgoblin", "core.gnome", "core.ratfolk", "core.leshy", "core.lizardfolk", "core.kholo"];
     for (const ancestry of ancestries) {
       for (let i = 0; i < 40; i += 1) {
-        const npc = engine.generate({ seed: `names-080-auto-${ancestry}-${i}`, ancestry, identity: { nameLocale: "en" } });
+        const npc = engine.generate({ seed: `names-090-auto-${ancestry}-${i}`, ancestry, identity: { nameLocale: "en" } });
         assert.equal(npc.identity.nameCulture, null, `${ancestry} acquired ${npc.identity.nameCulture?.id}`);
         const pack = registry.get("namePacks", npc.identity.nameParts.packId);
         assert.ok(pack, npc.identity.nameParts.packId);
@@ -95,10 +97,14 @@ if (!NPC_FORGE_ROOT) {
       ["core.leshy", `${MODULE_ID}.kyonin`, `${MODULE_ID}.leshy-kyonin`],
       ["core.lizardfolk", `${MODULE_ID}.mwangi`, `${MODULE_ID}.iruxi-mwangi`],
       ["core.kholo", `${MODULE_ID}.katapeshi`, `${MODULE_ID}.kholo-katapeshi`],
-      ["core.tengu", `${MODULE_ID}.qadiran`, `${MODULE_ID}.tengu-qadiran`]
+      ["core.tengu", `${MODULE_ID}.qadiran`, `${MODULE_ID}.tengu-qadiran`],
+      ["core.tengu", `${MODULE_ID}.shackles`, `${MODULE_ID}.tengu-shackles`],
+      ["core.kholo", `${MODULE_ID}.osiriani`, `${MODULE_ID}.kholo-osiriani`],
+      ["core.kholo", `${MODULE_ID}.nexian`, `${MODULE_ID}.kholo-nexian`],
+      ["core.ratfolk", `${MODULE_ID}.ustalavic`, `${MODULE_ID}.ysoki-ustalavic`]
     ];
     for (const [ancestry, culture, expectedPack] of cases) {
-      const npc = engine.generate({ seed: `names-080-fixed-${ancestry}`, ancestry, identity: { nameCulture: culture, nameLocale: "en" } });
+      const npc = engine.generate({ seed: `names-090-fixed-${ancestry}`, ancestry, identity: { nameCulture: culture, nameLocale: "en" } });
       assert.equal(npc.identity.nameCulture?.id, culture);
       assert.equal(npc.identity.nameParts.packId, expectedPack);
     }

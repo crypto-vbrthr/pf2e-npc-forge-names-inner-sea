@@ -4,6 +4,38 @@
 
 The add-on requires **PF2E NPC Forge 1.1.2 or newer**.
 
+## 0.9.0 – Final Cultural Expansion
+
+Version 0.9.0 completes the planned pre-1.0 cultural expansion with a final set of major Inner Sea traditions and several ancestry-specific regional variants. The focus is on conspicuous remaining regions and peoples rather than raw volume.
+
+### Final human cultures
+
+- Alkenstari
+- Jalmerayi
+- Shackles
+- Hermean
+- Lirgeni Tradition
+- Yamasan Tradition
+- Mzali
+- Varki
+
+The Lirgeni and Yamasan entries are explicitly presented as surviving naming traditions rather than present-day nations. Varki use a single-name compositional structure instead of an imposed family-name convention.
+
+### Final ancestry-specific regional variants
+
+- **Shackles tengu**, using a seafaring phonotactic generator without mandatory family names
+- **Osiriani kholo**, using localized river-, dune-, temple-, papyrus-, and sun-themed family names
+- **Nexian kholo**, using localized rune-, glass-, ward-, tower-, and arcane-themed family names
+- **Ustalavic ysoki**, using a compact recurring-root generator suited to a regional enclave rather than mandatory surnames
+
+Shackles culture is automatic for humans but explicit-only for tengu. Osiriani and Nexian cultures now explicitly support kholo, while Ustalavic culture explicitly supports ysoki; all three remain automatic for humans only. Universal nonhuman ancestry packs therefore remain the normal automatic fallback.
+
+### Library scale
+
+The final expansion adds **11,800 possible base naming combinations**. The complete library now contains **53 cultures**, **85 name packs**, **190,290 theoretical base combinations**, and **185,482 distinct base names** before optional epithets.
+
+0.9.0 also extends the real NPC Forge 1.1.2 integration suite to the new regional variants and keeps the 30% human cross-culture overlap ceiling, rendered component uniqueness checks, localization parity checks, and release-gated real-engine integration checks introduced by the earlier quality passes.
+
 ## 0.8.1 – Regional Localization & Phonetics Pass
 
 Version 0.8.1 is a focused polish release over the 0.8.0 expansion. It keeps the same cultural coverage while tightening the Qadiran tengu generator and aligning several regional display names with the reviewed German terminology.
@@ -313,7 +345,7 @@ The names in this add-on are original, setting-inspired generator content. The m
 
 ## Planned expansion
 
-With all current NPC Forge core ancestries covered and four regional expansion waves in place, future releases can deepen selected cultures, add city- or nation-specific variants where they create a genuinely different naming style, and continue quality, weighting, and duplication review across the complete library.
+With all current NPC Forge core ancestries covered and five regional expansion waves complete, 0.9.0 closes the planned pre-1.0 content expansion. The next release step is a final library, integration, localization, weighting, and release-readiness review rather than another broad content wave.
 
 ## Requirements
 
