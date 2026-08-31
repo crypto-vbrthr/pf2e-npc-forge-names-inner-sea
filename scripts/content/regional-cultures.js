@@ -19,13 +19,13 @@ const H = ["core.human"];
 export const REGIONAL_CULTURES = Object.freeze([
   { id: `${MODULE_ID}.shoanti`, labelKey: "NAMESINNERSEA.Culture.Shoanti", ancestryIds: H, automaticAncestryIds: H, supportedLocales: LOCALES, weight: 8 },
   { id: `${MODULE_ID}.kellid`, labelKey: "NAMESINNERSEA.Culture.Kellid", ancestryIds: H, automaticAncestryIds: H, supportedLocales: LOCALES, weight: 7 },
-  { id: `${MODULE_ID}.mwangi`, labelKey: "NAMESINNERSEA.Culture.Mwangi", ancestryIds: H, automaticAncestryIds: H, supportedLocales: LOCALES, weight: 9 },
+  { id: `${MODULE_ID}.mwangi`, labelKey: "NAMESINNERSEA.Culture.Mwangi", ancestryIds: ["core.human", "core.lizardfolk"], automaticAncestryIds: H, supportedLocales: LOCALES, weight: 9 },
   { id: `${MODULE_ID}.vudrani`, labelKey: "NAMESINNERSEA.Culture.Vudrani", ancestryIds: H, automaticAncestryIds: H, supportedLocales: LOCALES, weight: 8 },
   { id: `${MODULE_ID}.sarkorian`, labelKey: "NAMESINNERSEA.Culture.Sarkorian", ancestryIds: H, automaticAncestryIds: H, supportedLocales: LOCALES, weight: 7 },
   { id: `${MODULE_ID}.brevic`, labelKey: "NAMESINNERSEA.Culture.Brevic", ancestryIds: H, automaticAncestryIds: H, supportedLocales: LOCALES, weight: 8 },
   { id: `${MODULE_ID}.rahadoumi`, labelKey: "NAMESINNERSEA.Culture.Rahadoumi", ancestryIds: H, automaticAncestryIds: H, supportedLocales: LOCALES, weight: 7 },
   { id: `${MODULE_ID}.nidalese`, labelKey: "NAMESINNERSEA.Culture.Nidalese", ancestryIds: H, automaticAncestryIds: H, supportedLocales: LOCALES, weight: 7 },
-  { id: `${MODULE_ID}.kyonin`, labelKey: "NAMESINNERSEA.Culture.Kyonin", ancestryIds: ["core.elf"], automaticAncestryIds: [], supportedLocales: LOCALES, weight: 12 },
+  { id: `${MODULE_ID}.kyonin`, labelKey: "NAMESINNERSEA.Culture.Kyonin", ancestryIds: ["core.elf", "core.leshy"], automaticAncestryIds: [], supportedLocales: LOCALES, weight: 12 },
   { id: `${MODULE_ID}.five-kings`, labelKey: "NAMESINNERSEA.Culture.FiveKings", ancestryIds: ["core.dwarf"], automaticAncestryIds: [], supportedLocales: LOCALES, weight: 12 },
   { id: `${MODULE_ID}.belkzen`, labelKey: "NAMESINNERSEA.Culture.Belkzen", ancestryIds: ["core.orc"], automaticAncestryIds: [], supportedLocales: LOCALES, weight: 12 }
 ]);

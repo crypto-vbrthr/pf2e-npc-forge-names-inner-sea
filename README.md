@@ -4,6 +4,34 @@
 
 The add-on requires **PF2E NPC Forge 1.1.2 or newer**.
 
+## 0.8.0 – Regional & Cultural Expansion IV
+
+Version 0.8.0 adds another focused regional layer across Avistan and northern Garund while extending four existing cultures to ancestry-specific variants without changing their automatic-resolution behavior.
+
+### New human cultures
+
+- Nirmathi
+- Qadiran
+- Ravouneli
+- Vidric
+- New Thassilonian
+- Lastwall
+- Mediogaltan
+- Mammoth Lands
+
+All eight participate in automatic human cultural resolution. Qadiran culture also exposes an explicit tengu variant, but remains automatic for humans only.
+
+### New ancestry-specific regional variants
+
+- **Kyonin leshies**, using semantically localized grove- and plant-form compounds rather than ordinary humanoid surnames
+- **Mwangi iruxi**, using sibilant proper names and localized river-, marsh-, rain-, scale-, and mangrove-themed family names
+- **Katapeshi kholo**, using compact proper names and localized caravan-, bazaar-, spice-, coin-, road-, and trade-themed family names
+- **Qadiran tengu**, using a dedicated caravan-route phonotactic generator without mandatory family names
+
+Kyonin now explicitly supports leshies, Mwangi supports iruxi, and Katapeshi supports kholo. Their `automaticAncestryIds` remain unchanged, so these variants never displace the universal ancestry packs unless the culture is selected by the user or supplied by a host module.
+
+The release adds **12,908 possible base naming combinations**. The complete library now exposes **178,570 possible base combinations** representing approximately **173,930 distinct base names** before optional epithets. Descriptive family names introduced in this release use semantic German/English localization rather than fixed English strings.
+
 ## 0.7.1 – Phonetics, Localization & Release Quality Pass
 
 Version 0.7.1 is a focused polish release over the 0.7.0 regional expansion. It keeps the same cultural coverage and theoretical combination count while tightening phonetic output, German localization, and release-time integration validation.
@@ -265,7 +293,7 @@ The names in this add-on are original, setting-inspired generator content. The m
 
 ## Planned expansion
 
-With all current NPC Forge core ancestries covered and three regional expansion waves in place, future releases can deepen selected cultures, add city- or nation-specific variants where they create a genuinely different naming style, and continue quality, weighting, and duplication review across the complete library.
+With all current NPC Forge core ancestries covered and four regional expansion waves in place, future releases can deepen selected cultures, add city- or nation-specific variants where they create a genuinely different naming style, and continue quality, weighting, and duplication review across the complete library.
 
 ## Requirements
 

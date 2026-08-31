@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.8.0 – Regional & Cultural Expansion IV
+
+- Added eight human cultural name packs: Nirmathi, Qadiran, Ravouneli, Vidric, New Thassilonian, Lastwall, Mediogaltan, and Mammoth Lands.
+- Added explicit regional ancestry packs for Kyonin leshies, Mwangi iruxi, Katapeshi kholo, and Qadiran tengu.
+- Extended Kyonin culture to leshies, Mwangi culture to iruxi, and Katapeshi culture to kholo without changing their automatic ancestry behavior.
+- Made Qadiran culture available to tengu while keeping automatic Qadiran resolution human-only.
+- Added semantically localized Nirmathi, Lastwall, and Mammoth Lands speaking family names plus localized regional nonhuman family names and epithets.
+- Preserved universal nonhuman ancestry packs as the automatic fallback for leshies, iruxi, kholo, and tengu.
+- Added 12,908 possible base combinations, bringing the full library to 178,570 theoretical base combinations and approximately 173,930 distinct base names before optional epithets.
+- Expanded real NPC Forge integration coverage to the four new explicit ancestry variants and to automatic fallback protection for leshies, iruxi, and kholo.
+- Added 0.8.0 content, localization, namespace, culture-reference, density, and public-API regression tests.
+
 ## 0.7.1 – Phonetics, Localization & Release Quality Pass
 
 - Reworked the Absalomi tengu phonotactic generator to reduce exact overlap with the universal tengu pack from roughly 27% to 0%.
