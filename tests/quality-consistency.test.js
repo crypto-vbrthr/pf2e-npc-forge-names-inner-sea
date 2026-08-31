@@ -215,6 +215,32 @@ test("Absalomi ysoki generator avoids doubled root/ending seams", () => {
   }
 });
 
+test("Qadiran tengu phonotactics avoid lexical collisions and remain regionally distinct", () => {
+  const universal = ANCESTRY_NAME_PACKS_III.find((pack) => pack.id === `${MODULE_ID}.tengu-inner-sea`);
+  const qadiran = REGIONAL_NAME_PACKS_IV.find((pack) => pack.id === `${MODULE_ID}.tengu-qadiran`);
+  assert.ok(universal && qadiran);
+  const names = givenValues(qadiran);
+  assert.equal(new Set(names.map(normalize)).size, names.length, "Qadiran tengu output must remain unique");
+  const ratio = overlapRatio(givenValues(universal), names);
+  assert.ok(ratio <= 0.15, `Qadiran/universal tengu overlap ${(ratio * 100).toFixed(1)}%`);
+  const forbidden = new Set(["quran", "fish", "fair", "josh", "mash", "mush", "radar", "rush", "karen", "nein"]);
+  for (const name of names) {
+    assert.ok(name.length >= 5, `Qadiran tengu output is too short: ${name}`);
+    assert.ok(!forbidden.has(normalize(name)), `Qadiran tengu lexical collision: ${name}`);
+  }
+});
+
+test("0.8.1 regional display names use the reviewed German and English terminology", () => {
+  assert.equal(de["NAMESINNERSEA.Culture.Lastwall"], "Finismurer Tradition");
+  assert.equal(de["NAMESINNERSEA.Pack.LastwallHuman"], "Menschennamen der Finismurer Tradition");
+  assert.equal(en["NAMESINNERSEA.Culture.Lastwall"], "Lastwall Tradition");
+  assert.equal(de["NAMESINNERSEA.Culture.MammothLands"], "Reich der Mammutherren");
+  assert.equal(de["NAMESINNERSEA.Pack.MammothLandsHuman"], "Menschennamen aus dem Reich der Mammutherren");
+  assert.equal(en["NAMESINNERSEA.Culture.MammothLands"], "Realm of the Mammoth Lords");
+  assert.equal(de["NAMESINNERSEA.Culture.NewThassilonian"], "Neu-Thassilonisch");
+  assert.equal(de["NAMESINNERSEA.Pack.NewThassilonianHuman"], "Neu-Thassilonische Menschennamen");
+});
+
 test("the expanded library exposes over 175,000 combinations and over 170,000 distinct base names", () => {
   let theoretical = 0;
   const unique = new Set();

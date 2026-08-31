@@ -4,6 +4,26 @@
 
 The add-on requires **PF2E NPC Forge 1.1.2 or newer**.
 
+## 0.8.1 – Regional Localization & Phonetics Pass
+
+Version 0.8.1 is a focused polish release over the 0.8.0 expansion. It keeps the same cultural coverage while tightening the Qadiran tengu generator and aligning several regional display names with the reviewed German terminology.
+
+### Qadiran tengu phonetics
+
+- Rebuilt the Qadiran tengu phonotactic space around longer route-inspired codas, reducing accidental ordinary-word outputs.
+- Removed lexical collisions such as `Quran`, `Fish`, `Fair`, `Josh`, `Mash`, `Mush`, `Radar`, and `Rush` by construction and regression tests.
+- The generator now produces **560 unique given names** and remains below **15% exact overlap** with the universal tengu output.
+- Added a dedicated lexical-collision and regional-separation regression test.
+
+### Regional localization polish
+
+- German `Lastwall` display text now renders as **Finismurer Tradition**, reflecting that the pack represents a surviving naming tradition rather than a present-day nation. English now renders this culture as **Lastwall Tradition**.
+- `Mammoth Lands` now renders as **Realm of the Mammoth Lords** in English and **Reich der Mammutherren** in German.
+- German `New Thassilonian` now renders as **Neu-Thassilonisch**, including the associated human name-pack label.
+- Internal culture and pack IDs remain unchanged for compatibility with saved requests and host modules.
+
+After the Qadiran tengu quality pruning, the complete library exposes **178,490 possible base combinations** representing **173,946 distinct base names** before optional epithets.
+
 ## 0.8.0 – Regional & Cultural Expansion IV
 
 Version 0.8.0 adds another focused regional layer across Avistan and northern Garund while extending four existing cultures to ancestry-specific variants without changing their automatic-resolution behavior.

@@ -164,9 +164,9 @@ export const REGIONAL_NAME_PACKS_IV = Object.freeze([
     cultureIds: [`${MODULE_ID}.qadiran`], supportedLocales: LOCALES, weight: 14,
     generators: {
       given: componentGenerator([ ["onset", "vowel", "coda"] ], {
-        onset: ["Zh", "Kh", "Q", "D", "F", "J", "M", "R", "Sh", "T"],
-        vowel: ["a", "e", "i", "o", "u", "ai", "au", "ei"],
-        coda: ["q", "r", "sh", "v", "z", "dar", "mir", "ran"]
+        onset: ["Zh", "Kh", "Q", "D", "F", "J", "M", "Rh", "Sh", "T"],
+        vowel: ["a", "e", "i", "o", "u", "ai", "au"],
+        coda: ["dar", "mir", "resh", "van", "zar", "shir", "vek", "ram"]
       })
     },
     epithets: [semantic("QadiranTengu.Epithet.CaravanWing", "Caravan-Wing"), semantic("QadiranTengu.Epithet.SaffronFeather", "Saffron-Feather")], epithetChance: 0.11

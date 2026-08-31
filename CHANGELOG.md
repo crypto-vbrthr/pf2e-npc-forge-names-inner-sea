@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.8.1 – Regional Localization & Phonetics Pass
+
+- Rebuilt the Qadiran tengu phonotactic generator around longer codas, retaining 560 unique generated given names while removing accidental lexical outputs.
+- Added regression coverage for Qadiran tengu lexical collisions, minimum output length, uniqueness, and regional separation from the universal tengu pack.
+- Corrected German `Lastwall` display text to **Finismurer Tradition** and the corresponding human pack label to **Menschennamen der Finismurer Tradition**; English now uses **Lastwall Tradition**.
+- Corrected `Mammoth Lands` display text to **Realm of the Mammoth Lords** / **Reich der Mammutherren** and updated the human pack labels.
+- Corrected German `New Thassilonian` to **Neu-Thassilonisch** and updated the human pack label.
+- Kept all internal culture and pack IDs stable for saved-data and host-module compatibility.
+- The complete library now exposes 178,490 theoretical base combinations and 173,946 distinct base names before optional epithets.
+
 ## 0.8.0 – Regional & Cultural Expansion IV
 
 - Added eight human cultural name packs: Nirmathi, Qadiran, Ravouneli, Vidric, New Thassilonian, Lastwall, Mediogaltan, and Mammoth Lands.
