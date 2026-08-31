@@ -1,0 +1,10 @@
+{
+  "name": "pf2e-npc-forge-names-inner-sea",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "check": "node --check scripts/main.js && node --check scripts/content/human-cultures.js && node --test"
+  }
+}

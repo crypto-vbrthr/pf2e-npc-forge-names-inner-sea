@@ -1,0 +1,55 @@
+{
+  "id": "pf2e-npc-forge-names-inner-sea",
+  "title": "PF2E NPC Forge: Names of the Inner Sea",
+  "description": "A cultural name expansion for PF2E NPC Forge, adding large setting-inspired name pools for peoples of the Inner Sea region.",
+  "version": "0.1.0",
+  "authors": [
+    {
+      "name": "crypto-vbrthr"
+    }
+  ],
+  "compatibility": {
+    "minimum": "14",
+    "verified": "14"
+  },
+  "relationships": {
+    "systems": [
+      {
+        "id": "pf2e",
+        "type": "system",
+        "compatibility": {
+          "minimum": "8.1.2"
+        }
+      }
+    ],
+    "requires": [
+      {
+        "id": "pf2e-npc-forge",
+        "type": "module",
+        "compatibility": {
+          "minimum": "1.1.0"
+        }
+      }
+    ]
+  },
+  "esmodules": [
+    "scripts/main.js"
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    },
+    {
+      "lang": "de",
+      "name": "Deutsch",
+      "path": "lang/de.json"
+    }
+  ],
+  "license": "LICENSE",
+  "readme": "README.md",
+  "url": "https://github.com/crypto-vbrthr/pf2e-npc-forge-names-inner-sea",
+  "manifest": "https://raw.githubusercontent.com/crypto-vbrthr/pf2e-npc-forge-names-inner-sea/main/module.json",
+  "download": "https://github.com/crypto-vbrthr/pf2e-npc-forge-names-inner-sea/releases/download/0.1.0/pf2e-npc-forge-names-inner-sea.zip"
+}
