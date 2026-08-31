@@ -9,6 +9,7 @@ import { registerAncestryNamesII } from "../scripts/content/ancestry-names-ii.js
 import { registerAncestryNamesIII } from "../scripts/content/ancestry-names-iii.js";
 import { registerRegionalCultures } from "../scripts/content/regional-cultures.js";
 import { registerRegionalCulturesII } from "../scripts/content/regional-cultures-ii.js";
+import { registerRegionalCulturesIII } from "../scripts/content/regional-cultures-iii.js";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const MODULE_ID = "pf2e-npc-forge-names-inner-sea";
@@ -49,6 +50,7 @@ if (!NPC_FORGE_ROOT) {
     registerAncestryNamesIII(api);
     registerRegionalCultures(api);
     registerRegionalCulturesII(api);
+    registerRegionalCulturesIII(api);
     return { registry, engine: new NpcEngine({ registry }) };
   }
 
@@ -82,7 +84,12 @@ if (!NPC_FORGE_ROOT) {
       ["core.goblin", `${MODULE_ID}.isgeri`, `${MODULE_ID}.goblin-isgeri`],
       ["core.hobgoblin", `${MODULE_ID}.oprak`, `${MODULE_ID}.hobgoblin-oprak`],
       ["core.gnome", `${MODULE_ID}.brastlewark`, `${MODULE_ID}.gnome-brastlewark`],
-      ["core.ratfolk", `${MODULE_ID}.katapeshi`, `${MODULE_ID}.ysoki-katapeshi`]
+      ["core.ratfolk", `${MODULE_ID}.katapeshi`, `${MODULE_ID}.ysoki-katapeshi`],
+      ["core.elf", `${MODULE_ID}.mordant-spire`, `${MODULE_ID}.elf-mordant-spire`],
+      ["core.dwarf", `${MODULE_ID}.dongun-hold`, `${MODULE_ID}.dwarf-dongun-hold`],
+      ["core.halfling", `${MODULE_ID}.absalomi`, `${MODULE_ID}.halfling-absalomi`],
+      ["core.tengu", `${MODULE_ID}.absalomi`, `${MODULE_ID}.tengu-absalomi`],
+      ["core.ratfolk", `${MODULE_ID}.absalomi`, `${MODULE_ID}.ysoki-absalomi`]
     ];
     for (const [ancestry, culture, expectedPack] of cases) {
       const npc = engine.generate({ seed: `names-061-fixed-${ancestry}`, ancestry, identity: { nameCulture: culture, nameLocale: "en" } });

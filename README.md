@@ -4,6 +4,37 @@
 
 The add-on requires **PF2E NPC Forge 1.1.2 or newer**.
 
+## 0.7.0 – Regional & Cultural Expansion III
+
+Version 0.7.0 expands the regional layer with eight additional human cultural styles and five ancestry-specific variants. The release keeps the stricter generator-quality rules introduced in 0.6.1 while adding more urban, northern, frontier, and specialist regional identities.
+
+### New human cultures
+
+- Absalomi
+- Druman
+- Galtan
+- Irriseni
+- Mendevian
+- Numerian
+- Razmiri
+- River Kingdoms / Riverfolk
+
+All eight participate in automatic human cultural resolution. Their given-name pools remain gender-aware and are checked against the existing human library under the 30% cross-culture overlap ceiling.
+
+### New ancestry-specific regional variants
+
+- **Mordant Spire elves**, using formal ocean-facing elven proper names and sea-themed epithets
+- **Dongun Hold dwarves**, using a large compositional family-name space built from craft, metal, engineering, hold, and fortification motifs
+- **Absalomi halflings**, using compact cosmopolitan proper names and localized market-, harbor-, street-, household-, and trade-themed speaking family names
+- **Absalomi tengu**, using a distinct cosmopolitan phonotactic generator without mandatory family names
+- **Absalomi ysoki**, using a reusable root-and-ending given-name stock rather than forced surnames
+
+Absalomi culture therefore supports humans, halflings, tengu, and ysoki, but remains automatic for humans only. Mordant Spire and Dongun Hold are explicit-only ancestry cultures. Installing the add-on still never replaces a universal nonhuman ancestry pack unless a regional culture is selected by the user or supplied by another module.
+
+The release adds **20,720 possible base naming combinations**. The complete library now exposes **165,662 possible base combinations** representing approximately **161,137 distinct base names** before optional epithets.
+
+The integration suite now also exercises the new explicit Mordant Spire, Dongun Hold, and Absalomi ancestry variants against the real NPC Forge 1.1.2 naming engine.
+
 ## 0.6.1 – Generator Quality Pass
 
 Version 0.6.1 is a focused generator-quality release. It deliberately trades a small amount of theoretical combination count for cleaner output, stronger regional differentiation, and automated integration coverage against the real NPC Forge naming engine.

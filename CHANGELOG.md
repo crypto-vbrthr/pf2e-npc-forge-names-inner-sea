@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.7.0 – Regional & Cultural Expansion III
+
+- Added eight human cultural name packs: Absalomi, Druman, Galtan, Irriseni, Mendevian, Numerian, Razmiri, and River Kingdoms / Riverfolk.
+- Added explicit regional ancestry packs for Mordant Spire elves and Dongun Hold dwarves.
+- Added Absalomi regional variants for halflings, tengu, and ysoki.
+- Made Absalomi culture available to humans, halflings, tengu, and ysoki while keeping automatic cultural resolution human-only through `automaticAncestryIds`.
+- Kept Mordant Spire and Dongun Hold explicit-only so universal elf and dwarf packs remain the automatic fallback.
+- Added semantically localized Absalomi halfling speaking family names and Dongun Hold compositional family-name components.
+- Preserved the 30% human cross-culture overlap ceiling; the current highest comparable given-name overlap remains below 23%.
+- Expanded the real NPC Forge integration suite with the new explicit regional variants.
+- Added 20,720 possible base naming combinations, bringing the library to 165,662 possible base combinations and approximately 161,137 distinct base names before optional epithets.
+
 ## 0.6.1 – Generator Quality Pass
 
 - Updated the minimum dependency to PF2E NPC Forge 1.1.2 and require the `deduplicated-name-pools` capability at runtime.

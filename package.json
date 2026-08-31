@@ -1,11 +1,11 @@
 {
   "name": "pf2e-npc-forge-names-inner-sea",
-  "version": "0.6.1",
+  "version": "0.7.0",
   "private": true,
   "type": "module",
   "scripts": {
     "test": "node --test",
-    "check": "node --check scripts/main.js && node --check scripts/content/human-cultures.js && node --check scripts/content/ancestry-names-i.js && node --check scripts/content/ancestry-names-ii.js && node --check scripts/content/ancestry-names-iii.js && node --check scripts/content/regional-cultures.js && node --check scripts/content/regional-cultures-ii.js && node --test",
+    "check": "node --check scripts/main.js && node --check scripts/content/human-cultures.js && node --check scripts/content/ancestry-names-i.js && node --check scripts/content/ancestry-names-ii.js && node --check scripts/content/ancestry-names-iii.js && node --check scripts/content/regional-cultures.js && node --check scripts/content/regional-cultures-ii.js && node --check scripts/content/regional-cultures-iii.js && node --test",
     "test:integration": "node --test tests/npc-forge-integration.test.js"
   }
 }
